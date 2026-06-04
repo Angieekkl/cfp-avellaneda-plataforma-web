@@ -7,29 +7,26 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Ajustes de espaciado dinámico y scroll limpio */
         html {
             scroll-behavior: smooth;
         }
         
-        /* Evita que el menú fijo tape los títulos al clickear el índice */
         #nosotros, #oferta, #contacto {
             scroll-margin-top: 80px;
             padding-top: 90px !important;
             padding-bottom: 90px !important;
         }
 
-        /* Zona Inmersiva y Slider Mejorado */
         .dark-immersive-zone {
             background-color: #0f172a;
             padding-bottom: 60px;
         }
 
         .info-slider-container {
-            width: 92% !important; /* Más ancho para que respire en celulares */
+            width: 92% !important;
             max-width: 800px;
             margin: 30px auto 0 auto;
-            min-height: 160px; /* Evita saltos de altura raros */
+            min-height: 160px;
         }
 
         .info-slide {
@@ -43,7 +40,6 @@
             opacity: 1;
         }
 
-        /* Rediseño de caja de requisitos a azul institucional */
         .requisitos-box {
             border: 2px dashed #1e3a8a !important;
             background-color: #f0f4f8 !important;
@@ -61,7 +57,6 @@
             font-weight: 600;
         }
 
-        /* Corrección del formulario encimado en móviles */
         .form-container {
             margin-bottom: 40px;
             padding: 20px;
@@ -70,7 +65,6 @@
             margin-bottom: 20px;
         }
 
-        /* Unificación estética del Footer Institucional */
         footer {
             background-color: #111827;
             color: #ffffff;
@@ -107,7 +101,6 @@
 </head>
 <body>
 
-    <!-- BARRA DE NAVEGACIÓN -->
     <header>
         <div class="logo">CFP Avellaneda</div>
         <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
@@ -123,10 +116,8 @@
         </nav>
     </header>
 
-    <!-- ZONA INMERSIVA OSCURA -->
     <div class="dark-immersive-zone">
         
-        <!-- BANNER PRINCIPAL (HERO) -->
         <section class="hero">
             <div class="hero-content">
                 <h1>Formación profesional para tu futuro laboral</h1>
@@ -135,7 +126,6 @@
             </div>
         </section>
 
-        <!-- SECCIÓN NOSOTROS -->
         <section id="nosotros" class="section-nosotros-institucional">
             <h2>Sobre el CFP N° 404</h2>
             <p class="section-desc-grande">La Escuela de Formación Profesional N° 404 de Avellaneda brinda una formación integral basada en el trabajo en taller, la aplicación de conocimientos científicos y tecnológicos, y la preparación de los estudiantes para continuar estudios superiores o insertarse de forma inmediata en el sector productivo regional.</p>
@@ -160,7 +150,6 @@
 
     </div>
 
-    <!-- SECCIÓN OFERTA ACADÉMICA (TANDAS 1 Y 2 UNIFICADAS) -->
     <section id="oferta" class="section bg-light">
         
         <div class="cursos-destacados-frame">
@@ -174,7 +163,6 @@
                 <div class="carousel-container-window">
                     <div class="cards-container" id="coursesTrack">
                         
-                        <!-- Curso 1 -->
                         <div class="card curso-item" onclick="openCourseModal('cocinero')">
                             <div class="curso-img-container">
                                 <img src="css/assets/cocinero.jpeg" alt="Curso Cocinero" class="curso-foto">
@@ -187,7 +175,6 @@
                             </div>
                         </div>
                     
-                        <!-- Curso 2 -->
                         <div class="card curso-item" onclick="openCourseModal('acompanante')">
                             <div class="curso-img-container">
                                 <img src="css/assets/acompañante_terapeutico.jpeg" alt="Curso Acompañante Terapéutico" class="curso-foto">
@@ -200,7 +187,6 @@
                             </div>
                         </div>
                     
-                        <!-- Curso 3 -->
                         <div class="card curso-item" onclick="openCourseModal('modista')">
                             <div class="curso-img-container">
                                 <img src="css/assets/confeccionista_modista.jpeg" alt="Curso Confeccionista Modista" class="curso-foto">
@@ -213,7 +199,6 @@
                             </div>
                         </div>
 
-                        <!-- Curso 4 -->
                         <div class="card curso-item" onclick="openCourseModal('electricista')">
                             <div class="curso-img-container">
                                 <img src="css/assets/electricista.jpeg" alt="Curso Electricista" class="curso-foto">
@@ -226,7 +211,6 @@
                             </div>
                         </div>
 
-                        <!-- Curso 5 -->
                         <div class="card curso-item" onclick="openCourseModal('ingles')">
                             <div class="curso-img-container">
                                 <img src="css/assets/ingles_tecnologico.jpeg" alt="Curso Inglés Tecnológico" class="curso-foto">
@@ -239,7 +223,6 @@
                             </div>
                         </div>
 
-                        <!-- Curso 6 -->
                         <div class="card curso-item" onclick="openCourseModal('informatica')">
                             <div class="curso-img-container">
                                 <img src="css/assets/informatica_administracion_gestion.jpeg" alt="Curso Informática" class="curso-foto">
@@ -252,7 +235,6 @@
                             </div>
                         </div>
 
-                        <!-- Curso 7 -->
                         <div class="card curso-item" onclick="openCourseModal('marketing')">
                             <div class="curso-img-container">
                                 <img src="css/assets/marketing_digital.jpeg" alt="Curso Marketing Digital" class="curso-foto">
@@ -265,12 +247,9 @@
                             </div>
                         </div>
 
-                        <!-- === NUEVOS CURSOS TANDA 2 === -->
-                        
-                        <!-- Curso 8 (Conservas) -->
                         <div class="card curso-item" onclick="openCourseModal('conservas')">
                             <div class="curso-img-container">
-                                <img src="css/assets/conservas_frutas_hortatlizas.jpeg" alt="Curso Conservas" class="curso-foto">
+                                <img src="css/assets/conservas_frutas_hortalizas.jpeg" alt="Curso Conservas" class="curso-foto">
                             </div>
                             <div class="curso-card-body">
                                 <div class="curso-badge">Gastronomía</div>
@@ -280,7 +259,6 @@
                             </div>
                         </div>
 
-                        <!-- Curso 9 (Cuidado Niños) -->
                         <div class="card curso-item" onclick="openCourseModal('cuidado_ninos')">
                             <div class="curso-img-container">
                                 <img src="css/assets/cuidado_niños.jpeg" alt="Curso Cuidado de Niños" class="curso-foto">
@@ -293,7 +271,6 @@
                             </div>
                         </div>
 
-                        <!-- Curso 10 (Climatización) -->
                         <div class="card curso-item" onclick="openCourseModal('climatizacion')">
                             <div class="curso-img-container">
                                 <img src="css/assets/equipos_climatizacion.jpeg" alt="Curso Climatización" class="curso-foto">
@@ -306,7 +283,6 @@
                             </div>
                         </div>
 
-                        <!-- Curso 11 (Sanitarias) -->
                         <div class="card curso-item" onclick="openCourseModal('sanitarias')">
                             <div class="curso-img-container">
                                 <img src="css/assets/instalacion_sanitarias.jpeg" alt="Curso Instalaciones Sanitarias" class="curso-foto">
@@ -319,7 +295,6 @@
                             </div>
                         </div>
 
-                        <!-- Curso 12 (Sueldos) -->
                         <div class="card curso-item" onclick="openCourseModal('sueldos')">
                             <div class="curso-img-container">
                                 <img src="css/assets/liquidador_sueldos.jpeg" alt="Curso Liquidador de Sueldos" class="curso-foto">
@@ -332,7 +307,6 @@
                             </div>
                         </div>
 
-                        <!-- Curso 13 (Panadero) -->
                         <div class="card curso-item" onclick="openCourseModal('panadero')">
                             <div class="curso-img-container">
                                 <img src="css/assets/panadero.jpeg" alt="Curso Panadero" class="curso-foto">
@@ -345,7 +319,6 @@
                             </div>
                         </div>
 
-                        <!-- Curso 14 (Soldador Unificado) -->
                         <div class="card curso-item" onclick="openCourseModal('soldador')">
                             <div class="curso-img-container">
                                 <img src="css/assets/soldador.jpeg" alt="Curso Soldador" class="curso-foto">
@@ -358,6 +331,186 @@
                             </div>
                         </div>
 
+                        <div class="card curso-item" onclick="openCourseModal('herrero')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/curso_herrero.jpeg" alt="Curso Herrero" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Oficios</div>
+                                <h3>Herrería</h3>
+                                <p>Forjado, corte, modelado y unión de elementos de hierro y perfiles estructurales.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="card curso-item" onclick="openCourseModal('pensamiento')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/pensamiento_computacional.jpeg" alt="Pensamiento Computacional" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Informática</div>
+                                <h3>Pensamiento Computacional</h3>
+                                <p>Resolución de problemas complejos, lógica algorítmica y bases para la programación moderna.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="card curso-item" onclick="openCourseModal('diseno_grafico')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/curso_diseño_grafico.jpeg" alt="Diseño Gráfico" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Comunicación</div>
+                                <h3>Diseño Gráfico Nivel I</h3>
+                                <p>Herramientas vectoriales, composición visual, branding y edición digital de imágenes.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="card curso-item" onclick="openCourseModal('oratoria')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/capacitacion_oratoria.jpeg" alt="Capacitación en Oratoria" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Comunicación</div>
+                                <h3>Capacitación en Oratoria</h3>
+                                <p>Técnicas de expresión oral, manejo del pánico escénico y argumentación efectiva frente al público.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="card curso-item" onclick="openCourseModal('comida_soja')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/elaborador_comida_soja.jpeg" alt="Elaborador de Comida de Soja" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Gastronomía</div>
+                                <h3>Alimentos a Base de Soja</h3>
+                                <p>Producción culinaria saludable, manipulación e incorporación técnica de derivados de la soja.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="card curso-item" onclick="openCourseModal('electricista_inmuebles')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/electricista_inmuebles.jpeg" alt="Electricista en Inmuebles" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Oficios</div>
+                                <h3>Electricista en Inmuebles</h3>
+                                <p>Planificación, ejecución y mantenimiento de redes e instalaciones eléctricas domiciliarias seguras.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="card curso-item" onclick="openCourseModal('gasista')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/gasista_domicilio.jpeg" alt="Gasista Domiciliario" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Oficios</div>
+                                <h3>Gasista Domiciliario</h3>
+                                <p>Instalación y reparación de redes de gas según la reglamentación y resoluciones vigentes.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="card curso-item" onclick="openCourseModal('heladeras')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/reparacion_heladera.jpeg" alt="Reparación de Refrigeradores" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Oficios</div>
+                                <h3>Reparador/a de Heladeras</h3>
+                                <p>Diagnóstico de sistemas frigoríficos y reparación mecánica de refrigeradores domésticos.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="card curso-item" onclick="openCourseModal('electrodomesticos')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/reparador_eletrodomesticos.jpeg" alt="Reparador de Electrodomésticos" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Oficios</div>
+                                <h3>Reparador de Electrodomésticos</h3>
+                                <p>Detección de fallas y service técnico de dispositivos eléctricos del hogar de pequeña y mediana escala.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="card curso-item" onclick="openCourseModal('vendedor')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/vendedor.jpeg" alt="Curso Vendedor" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Comercial</div>
+                                <h3>Vendedor/a</h3>
+                                <p>Técnicas de negociación, atención al cliente, cierre de ventas y gestión de stock comercial.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="card curso-item" onclick="openCourseModal('instalador_sanitario')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/instalador_sanitario.jpeg" alt="Instalador Sanitario" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Oficios</div>
+                                <h3>Instalador Sanitario</h3>
+                                <p>Planificación e instalación de redes de agua corriente, sistemas de desagües y artefactos integrales.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="card curso-item" onclick="openCourseModal('confeccionista_bolsos')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/confeccionista_bolsos.jpeg" alt="Confeccionista de Bolsos" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Textil</div>
+                                <h3>Confección de Bolsos y Mochilas</h3>
+                                <p>Diseño, corte y armado técnico de marroquinería, carteras, mochilas y accesorios de viaje.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="card curso-item" onclick="openCourseModal('armador_paneles')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/armador_montador_paneles.jpeg" alt="Montador Paneles Yeso" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Oficios</div>
+                                <h3>Montador de Paneles de Yeso</h3>
+                                <p>Instalación técnica de tabiques, cielorrasos suspendidos y estructuras modulares en seco.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="card curso-item" onclick="openCourseModal('estampas')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/estampas.jpeg" alt="Técnicas de Estampado" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Oficios</div>
+                                <h3>Técnicas de Estampado</h3>
+                                <p>Procesos artesanales e industriales de impresión sobre múltiples soportes y telas textiles.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="card curso-item" onclick="openCourseModal('herramientas_marketing')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/herramientas_marketing_digital.jpeg" alt="Herramientas Marketing Digital" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Comercial</div>
+                                <h3>Herramientas de Marketing</h3>
+                                <p>Dominio técnico de plataformas analíticas, pauta digital avanzada y software de automatización.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -366,7 +519,6 @@
 
         </div>
 
-        <!-- REQUISITOS GENERALES -->
         <div class="requisitos-box">
             <h3><i class="fas fa-file-signature"></i> Requisitos Generales de Inscripción</h3>
             <div class="requisitos-grid">
@@ -378,7 +530,6 @@
         </div>
     </section>
 
-    <!-- FORMULARIO DE CONSULTAS -->
     <section id="contacto" class="section">
         <h2><i class="fas fa-envelope"></i> ¿Tenés dudas? Envianos tu consulta</h2>
         <p class="section-desc">Completá el formulario para que el equipo administrativo se contacte con vos.</p>
@@ -401,7 +552,7 @@
                         <option>Confeccionista Modista</option>
                         <option>Electricista Industrial</option>
                         <option>Inglés Tecnológico</option>
-                        <option>Informática para Administration y Gestión</option>
+                        <option>Informática para Administración y Gestión</option>
                         <option>Marketing Digital</option>
                         <option>Elaboración de Conservas</option>
                         <option>Cuidado de Niñas, Niños y Adolescentes</option>
@@ -410,6 +561,21 @@
                         <option>Liquidador/a de Sueldos</option>
                         <option>Panadero/a</option>
                         <option>Soldador/a</option>
+                        <option>Herrería</option>
+                        <option>Pensamiento Computacional</option>
+                        <option>Diseño Gráfico Nivel I</option>
+                        <option>Capacitación en Oratoria</option>
+                        <option>Alimentos a Base de Soja</option>
+                        <option>Electricista en Inmuebles</option>
+                        <option>Gasista Domiciliario</option>
+                        <option>Reparador/a de Heladeras</option>
+                        <option>Reparador de Electrodomésticos</option>
+                        <option>Vendedor/a</option>
+                        <option>Instalador Sanitario</option>
+                        <option>Confección de Bolsos y Mochilas</option>
+                        <option>Montador de Paneles de Yeso</option>
+                        <option>Técnicas de Estampado</option>
+                        <option>Herramientas de Marketing Digital</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -421,7 +587,6 @@
         </div>
     </section>
 
-    <!-- FOOTER UNIFICADO INSTITUCIONAL -->
     <footer>
         <div class="footer-info-grid">
             <p><i class="fas fa-map-marker-alt"></i> <strong>Sede Central:</strong> Alfredo Carlino 6243 - Wilde, Avellaneda.</p>
@@ -433,7 +598,6 @@
         </div>
     </footer>
 
-    <!-- VENTANA MODAL FLOTANTE -->
     <div id="courseModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -442,7 +606,6 @@
         </div>
     </div>
 
-    <!-- SCRIPTS DE INTERACCIÓN -->
     <script>
         const menuToggle = document.getElementById('menuToggle');
         const navMenu = document.getElementById('navMenu');
@@ -462,7 +625,6 @@
             navMenu.classList.remove('open');
         }
 
-        // CONTROL LÓGICO DEL SLIDER (NOSOTROS) CORREGIDO
         let infoIndex = 0;
         const infoSlides = document.querySelectorAll('.info-slide');
 
@@ -474,7 +636,6 @@
             infoSlides[infoIndex].classList.add('active');
         }
 
-        // CAROUSEL DE CURSOS
         const coursesTrack = document.getElementById('coursesTrack');
         const prevBtn = document.getElementById('coursesPrev');
         const nextBtn = document.getElementById('coursesNext');
@@ -495,7 +656,7 @@
             coursesTrack.style.transform = `translateX(-${currentScroll}px)`;
         });
 
-        // REPOSITORIO DE DATOS (MÓDALES) COMPLETO (TANDA 1 + TANDA 2)
+        // REPOSITORIO DE DATOS MODALES (30 CURSOS COMPLETOS)
         const infoFolletos = {
             cocinero: {
                 titulo: "Cocinero/a",
@@ -617,6 +778,142 @@
                         <p style="margin:4px 0;"><i class="fas fa-clock"></i> <strong>Horario:</strong> 08:00 a 12:00 hs</p>
                         <p style="margin:4px 0;"><i class="fas fa-map-marker-alt"></i> Manuel Belgrano 3739 - Sarandí</p>
                     </div>
+                `
+            },
+            herrero: {
+                titulo: "Herrería",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes, Martes y Miércoles</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 18:00 a 21:30 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Taller de Soldadura y Herrería</p>
+                `
+            },
+            pensamiento: {
+                titulo: "Pensamiento Computacional",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Jueves y Viernes</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 18:30 a 21:30 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Laboratorio Informático / Aula de Medios</p>
+                `
+            },
+            diseno_grafico: {
+                titulo: "Diseño Gráfico Nivel I",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Martes y Jueves</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 14:00 a 17:30 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Entorno Digital Avanzado</p>
+                `
+            },
+            oratoria: {
+                titulo: "Capacitación en Oratoria",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Martes, Jueves y Viernes</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 18:00 a 22:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Alfredo Carlino 6243</p>
+                `
+            },
+            comida_soja: {
+                titulo: "Elaborador/a de Alimentos a Base de Productos de Soja",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes, Miércoles y Jueves</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 18:00 a 22:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Alfredo Carlino 6243</p>
+                `
+            },
+            electricista_inmuebles: {
+                titulo: "Electricista en Inmuebles",
+                info: `
+                    <div style="border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 10px;">
+                        <h4 style="color:#1e3a8a; margin:0 0 5px 0;"><i class="fas fa-clock"></i> Comisión Turno Tarde</h4>
+                        <p style="margin:4px 0;"><i class="fas fa-calendar-day"></i> <strong>Días:</strong> Martes, Miércoles y Jueves</p>
+                        <p style="margin:4px 0;"><i class="fas fa-clock"></i> <strong>Horario:</strong> 13:00 a 17:00 hs</p>
+                    </div>
+                    <div>
+                        <h4 style="color:#1e3a8a; margin:0 0 5px 0;"><i class="fas fa-clock"></i> Comisión Turno Noche</h4>
+                        <p style="margin:4px 0;"><i class="fas fa-calendar-day"></i> <strong>Días:</strong> Martes, Miércoles y Jueves</p>
+                        <p style="margin:4px 0;"><i class="fas fa-clock"></i> <strong>Horario:</strong> 18:00 a 22:00 hs</p>
+                    </div>
+                    <p style="margin-top:10px;"><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Alfredo Carlino 6243</p>
+                `
+            },
+            gasista: {
+                titulo: "Gasista Domiciliario (Según Resolución CFE Nro 246/15 Anexo II)",
+                info: `
+                    <div style="border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 10px;">
+                        <h4 style="color:#1e3a8a; margin:0 0 5px 0;"><i class="fas fa-calendar-day"></i> Comisión A</h4>
+                        <p style="margin:4px 0;"><strong>Días:</strong> Lunes, Martes, Miércoles y Jueves</p>
+                        <p style="margin:4px 0;"><strong>Horario:</strong> 18:30 a 22:00 hs</p>
+                    </div>
+                    <div>
+                        <h4 style="color:#1e3a8a; margin:0 0 5px 0;"><i class="fas fa-calendar-day"></i> Comisión B</h4>
+                        <p style="margin:4px 0;"><strong>Días:</strong> Martes, Miércoles, Jueves y Viernes</p>
+                        <p style="margin:4px 0;"><strong>Horario:</strong> 18:30 a 22:00 hs</p>
+                    </div>
+                    <p style="margin-top:10px;"><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Alfredo Carlino 6243</p>
+                `
+            },
+            heladeras: {
+                titulo: "Reparador/a de Refrigeradores Domésticos",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Miércoles, Jueves y Viernes</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 18:30 a 22:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Taller de Refrigeración</p>
+                `
+            },
+            electrodomesticos: {
+                titulo: "Reparador/a de Electrodomésticos",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Miércoles, Jueves y Viernes</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 18:30 a 22:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Alfredo Carlino 6243</p>
+                `
+            },
+            vendedor: {
+                titulo: "Vendedor/a",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes, Martes y Miércoles</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 18:00 a 22:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Alfredo Carlino 6243</p>
+                `
+            },
+            instalador_sanitario: {
+                titulo: "Instalador Sanitario",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes, Martes y Miércoles</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 18:00 a 22:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Taller de Instalaciones Sanitarias</p>
+                `
+            },
+            confeccionista_bolsos: {
+                titulo: "Confección de Bolsos y Mochilas",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes, Martes y Jueves</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 18:00 a 21:30 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Taller de Confección Textil</p>
+                `
+            },
+            armador_paneles: {
+                titulo: "Armador y Montador de Paneles y Cielorrasos de Roca de Yeso",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Miércoles, Jueves y Viernes</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 17:00 a 21:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Aula Taller de Construcción en Seco</p>
+                `
+            },
+            estampas: {
+                titulo: "Técnicas de Estampado Multi-sustrato",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Martes, Jueves y Viernes</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 18:00 a 21:30 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Alfredo Carlino 6243</p>
+                `
+            },
+            herramientas_marketing: {
+                titulo: "Operador de Herramientas de Marketing Digital",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes y Miércoles</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 18:30 a 21:30 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Laboratorio de Medios y Sistemas</p>
                 `
             }
         };
