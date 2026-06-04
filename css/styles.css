@@ -30,6 +30,16 @@ header .logo {
     font-weight: bold;
 }
 
+/* Botón Hamburguesa Oculto por defecto */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -65,9 +75,12 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 1.5rem;
     color: #e2e8f0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn-primary {
@@ -90,6 +103,12 @@ nav ul li a:hover, nav ul li a.active {
     text-align: center;
 }
 
+.section-desc {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    color: #475569;
+}
+
 .bg-light {
     background-color: #f1f5f9;
 }
@@ -100,64 +119,199 @@ nav ul li a:hover, nav ul li a.active {
     color: #1e3a8a;
 }
 
-/* Tarjetas */
-.cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-}
-
-.card {
-    background: white;
+/* NUEVO SLIDER ESTILO TÉCNICA 6 (NOSOTROS) */
+.info-slider-container {
+    background-color: #1e293b; /* Fondo azul oscuro integrado */
+    color: white;
+    max-width: 650px;
+    margin: 2rem auto 0 auto;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    border-left: 5px solid #10b981; /* Borde de acento izquierdo */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.info-slider-track {
+    position: relative;
+    height: 120px; /* Tamaño controlado */
+}
+
+.info-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.5s ease-in-out;
     text-align: left;
-    border-top: 4px solid #3b82f6;
+    pointer-events: none;
+}
+
+.info-slide.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.info-slide h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.info-slide p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+.text-success {
+    color: #10b981;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.slider-arrow {
+    background: #334155;
+    border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.slider-arrow:hover {
+    background: #10b981;
+}
+
+/* ESTRUCTURA DEL CARRUSEL DE CURSOS (OFERTA ACADÉMICA) */
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 2rem auto;
+    position: relative;
+    gap: 1rem;
+}
+
+.carousel-container-window {
+    overflow: hidden;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    transition: transform 0.5s ease-in-out;
+    width: max-content;
+}
+
+/* Tarjeta individual */
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    width: 290px; /* Ajuste milimétrico para celulares */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card.curso-item {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.curso-img-container {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+}
+
+.curso-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.curso-card-body {
+    padding: 1.25rem;
 }
 
 .card h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     color: #1e3a8a;
+    font-size: 1.1rem;
 }
 
 .card p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #64748b;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.badge {
-    background: #e2e8f0;
-    color: #475569;
-    padding: 0.25rem 0.5rem;
-    font-size: 0.8rem;
-    border-radius: 4px;
+.btn-ver {
+    font-size: 0.85rem;
+    color: #3b82f6;
     font-weight: bold;
 }
 
-/* Footer */
-footer {
-    background: #111827;
-    color: #9ca3af;
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 0.9rem;
-}
-/* Etiquetas de categorías dentro de las tarjetas */
 .curso-badge {
     background-color: #1e3a8a;
     color: white;
-    padding: 0.2rem 0.6rem;
-    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.7rem;
     font-weight: bold;
     border-radius: 4px;
     display: inline-block;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
+}
+
+.carousel-btn {
+    background: white;
+    border: 1px solid #cbd5e1;
+    color: #1e3a8a;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+.carousel-btn:hover {
+    background: #1e3a8a;
+    color: white;
 }
 
 /* Caja de Requisitos */
@@ -190,6 +344,9 @@ footer {
     border-radius: 6px;
     font-weight: 600;
     color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .horario-atencion {
@@ -234,7 +391,7 @@ footer {
 }
 
 .btn-submit {
-    background: #10b981; /* Verde éxito */
+    background: #10b981;
     color: white;
     border: none;
     padding: 0.75rem 2rem;
@@ -250,7 +407,82 @@ footer {
     background: #059669;
 }
 
-/* Alerta dentro del modal */
+.info-footer-contacto {
+    margin-top: 3rem; 
+    font-size: 1.1rem; 
+    border-top: 1px solid #e2e8f0; 
+    padding-top: 2rem; 
+    text-align: center;
+}
+
+/* ESTILOS DE LA VENTANA MODAL (SOLUCIÓN AL ERROR DEL FILTRADO) */
+.modal {
+    display: none; /* ESCONDE EL CONTENIDO INICIALMENTE */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    max-width: 550px;
+    width: 100%;
+    position: relative;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: fadeInModal 0.3s ease-out;
+}
+
+@keyframes fadeInModal {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.8rem;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #334155;
+}
+
+#modalTitle {
+    color: #1e3a8a;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 0.5rem;
+}
+
+#modalBody p {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#modalBody i {
+    color: #3b82f6;
+    width: 20px;
+}
+
 .modal-alert {
     margin-top: 1.5rem;
     background-color: #eff6ff;
@@ -259,32 +491,59 @@ footer {
     font-size: 0.85rem;
     color: #1e40af;
     font-weight: 500;
-}
-/* Contenedor y formateo de imágenes en las tarjetas */
-.curso-img-container {
-    width: 100%;
-    height: 180px;
-    overflow: hidden;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    background-color: #e2e8f0;
-}
-
-.curso-foto {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Hace que calce perfecto sin deformarse */
-    display: block;
-}
-
-/* Reajuste de la tarjeta para que contenga la imagen de borde a borde */
-.card.curso-item {
-    padding: 0; /* Quitamos el padding general para que la foto toque los bordes */
     display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.curso-card-body {
-    padding: 1.5rem; /* El espacio interno se lo damos al texto de abajo */
+.modal-alert i {
+    color: #1e40af !important;
+}
+
+/* Footer */
+footer {
+    background: #111827;
+    color: #9ca3af;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE DESIGN: MENÚ HAMBURGUESA Y ADAPTACIONES */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Muestra el botón de tres líneas */
+    }
+
+    nav {
+        position: fixed;
+        top: 60px;
+        right: -100%; /* Escondido por defecto a la derecha */
+        width: 250px;
+        height: calc(100vh - 60px);
+        background: #1e3a8a;
+        box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    nav.open {
+        right: 0; /* Despliega el menú lateral */
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+        display: block;
+        width: 100%;
+    }
+    
+    .info-slider-track {
+        height: 160px; /* Más margen de altura en móvil por rotación de texto */
+    }
 }
