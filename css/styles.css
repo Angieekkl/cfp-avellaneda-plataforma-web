@@ -119,23 +119,23 @@ nav ul li a:hover, nav ul li a.active {
     text-align: center;
 }
 
-/* CAJA DESLIZABLE ESTILO REGENERADO */
+/* 1) CAJA DESLIZABLE AGRANDADA Y ACTUALIZADA A AZUL LLAMATIVO */
 .info-slider-container {
     background-color: rgba(255, 255, 255, 0.07);
     backdrop-filter: blur(5px);
     color: white;
-    max-width: 750px;
+    max-width: 950px; /* Expandido para que no se vea vacío y tenga más aire */
     margin: 2rem auto 0 auto;
     padding: 2.5rem;
     border-radius: 12px;
-    border-left: 6px solid #10b981; /* Borde izquierdo idéntico a referencia */
+    border-left: 6px solid #3b82f6; /* Cambiado el verde por el azul de realce */
     box-sizing: border-box;
     position: relative;
 }
 
 .info-slider-track {
     position: relative;
-    min-height: 140px; /* Evita saltos bruscos de altura */
+    min-height: 140px; 
 }
 
 .info-slide {
@@ -172,8 +172,9 @@ nav ul li a:hover, nav ul li a.active {
     line-height: 1.6;
 }
 
+/* Esta clase unifica los iconos vectoriales del slider al azul llamativo */
 .text-success {
-    color: #10b981;
+    color: #3b82f6 !important; 
 }
 
 .slider-controls {
@@ -199,7 +200,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .slider-arrow:hover {
-    background: #10b981;
+    background: #3b82f6; /* Cambiado el hover al azul unificado */
     transform: scale(1.05);
 }
 
@@ -368,7 +369,7 @@ nav ul li a:hover, nav ul li a.active {
     margin: 4rem auto 0 auto;
     padding: 2.5rem;
     border-radius: 12px;
-    border: 2px dashed #3b82f6;
+    border: 2px dashed #1e3a8a; /* Pasada a azul institucional para combinar */
     box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
 
@@ -391,7 +392,7 @@ nav ul li a:hover, nav ul li a.active {
     padding: 0.85rem 1.5rem;
     border-radius: 8px;
     font-weight: 600;
-    color: #334155;
+    color: #1e3a8a; /* Texto interno de requisitos pasado a azul */
     font-size: 1rem;
     display: flex;
     align-items: center;
@@ -403,7 +404,11 @@ nav ul li a:hover, nav ul li a.active {
     color: #475569;
 }
 
-/* Estilos de Formulario */
+/* 2) ESTILOS DEL FORMULARIO Y SECCIÓN DE CONSULTAS CENTRADAS */
+#contacto {
+    text-align: center; /* Centra perfectamente el título de dudas de forma prolija */
+}
+
 .form-container {
     background: #ffffff;
     max-width: 650px;
@@ -411,7 +416,7 @@ nav ul li a:hover, nav ul li a.active {
     padding: 2.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    text-align: left;
+    text-align: left; /* Mantiene la alineación prolija de los inputs por dentro */
 }
 
 .form-group {
@@ -435,7 +440,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .btn-submit {
-    background: #10b981;
+    background: #3b82f6; /* Botón de formulario unificado al mismo azul del slider */
     color: white;
     border: none;
     padding: 0.9rem 2rem;
@@ -448,16 +453,68 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .btn-submit:hover {
-    background: #059669;
+    background: #1d4ed8; /* Variante azul un poco más oscura en el hover */
 }
 
-.info-footer-contacto {
-    margin-top: 4rem; 
-    font-size: 1.15rem; 
-    border-top: 1px solid #e2e8f0; 
-    padding-top: 2.5rem; 
+/* 3) RESTRUCTURACIÓN DEL FOOTER (Info a un costado y azul visible) */
+footer {
+    background: #111827;
+    color: #9ca3af;
     text-align: center;
-    line-height: 1.8;
+    padding: 3rem 5%;
+    font-size: 1rem;
+    border-top: 4px solid #1e3a8a;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Tira de forma simétrica la marca a un lado y los datos al otro */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: left;
+    padding-bottom: 2rem;
+}
+
+.footer-brand {
+    flex: 1;
+    min-width: 280px;
+}
+
+.footer-brand h3 {
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-info-grid {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Azul celeste institucional suave, estético y legible sobre el fondo gris oscuro */
+.footer-info-grid p {
+    margin: 0.75rem 0;
+    font-size: 1.05rem;
+    color: #93c5fd; 
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.footer-info-grid i {
+    color: #3b82f6;
+    width: 20px;
+    text-align: center;
+}
+
+.footer-bottom-bar {
+    border-top: 1px solid #2d3748;
+    padding-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #6b7280;
 }
 
 /* VENTANA MODAL (RESGUARDADA) */
@@ -525,18 +582,10 @@ nav ul li a:hover, nav ul li a.active {
     gap: 0.6rem;
 }
 
-footer {
-    background: #111827;
-    color: #9ca3af;
-    text-align: center;
-    padding: 2rem;
-    font-size: 1rem;
-}
-
 /* MEDIA QUERIES REDISEÑADOS PARA PANTALLAS DE ALTA DENSIDAD (MÓVIL) */
 @media (max-width: 1024px) {
     .menu-toggle {
-        display: block; /* Forzado de hamburguesa para tablets y móviles modernos */
+        display: block; 
     }
 
     nav {
@@ -562,14 +611,13 @@ footer {
     }
 
     nav ul li a {
-        font-size: 1.3rem; /* Letras cómodas para tocar con el dedo */
+        font-size: 1.3rem; 
         display: block;
         width: 100%;
         border-bottom: 1px solid rgba(255,255,255,0.1);
         padding-bottom: 0.75rem;
     }
 
-    /* AMPLITUD ABSOLUTA EN MÓVIL */
     .hero-content h1 { font-size: 2.1rem; }
     .section-nosotros-institucional h2 { font-size: 2rem; }
     .section-desc-grande { font-size: 1.1rem; }
@@ -581,21 +629,28 @@ footer {
     .info-slide h3 { font-size: 1.3rem; }
     .info-slide p { font-size: 1rem; }
 
-    /* REDISEÑO DEL CARRUSEL EN CELULARES */
     .cursos-destacados-frame {
         padding: 2rem 1rem;
     }
     
     .card {
-        width: 78vw; /* Ocupa el 78% de la pantalla para ver el siguiente al lado */
+        width: 78vw; 
     }
     
     .carousel-btn {
-        display: none; /* En celular se navega deslizando lateralmente de forma natural */
+        display: none; 
     }
     
     .carousel-container-window {
-        overflow-x: auto; /* Permite scroll táctil fluido */
+        overflow-x: auto; 
         -webkit-overflow-scrolling: touch;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-info-grid p {
+        justify-content: center;
     }
 }
