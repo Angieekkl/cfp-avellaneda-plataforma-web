@@ -160,7 +160,7 @@
 
     </div>
 
-    <!-- SECCIÓN OFERTA ACADÉMICA (TANDA 1) -->
+    <!-- SECCIÓN OFERTA ACADÉMICA (TANDAS 1 Y 2 UNIFICADAS) -->
     <section id="oferta" class="section bg-light">
         
         <div class="cursos-destacados-frame">
@@ -265,6 +265,99 @@
                             </div>
                         </div>
 
+                        <!-- === NUEVOS CURSOS TANDA 2 === -->
+                        
+                        <!-- Curso 8 (Conservas) -->
+                        <div class="card curso-item" onclick="openCourseModal('conservas')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/conservas_frutas_hortatlizas.jpeg" alt="Curso Conservas" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Gastronomía</div>
+                                <h3>Elaboración de Conservas</h3>
+                                <p>Métodos seguros de procesamiento y empaque higiénico de frutas y hortalizas.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Curso 9 (Cuidado Niños) -->
+                        <div class="card curso-item" onclick="openCourseModal('cuidado_ninos')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/cuidado_niños.jpeg" alt="Curso Cuidado de Niños" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Social</div>
+                                <h3>Cuidado de Niñas, Niños y Adolescentes</h3>
+                                <p>Herramientas pedagógicas y normativas para la atención y acompañamiento de menores.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Curso 10 (Climatización) -->
+                        <div class="card curso-item" onclick="openCourseModal('climatizacion')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/equipos_climatizacion.jpeg" alt="Curso Climatización" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Oficios</div>
+                                <h3>Equipos de Climatización</h3>
+                                <p>Instalación, diagnóstico de fallas y mantenimiento de acondicionadores de aire domésticos.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Curso 11 (Sanitarias) -->
+                        <div class="card curso-item" onclick="openCourseModal('sanitarias')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/instalacion_sanitarias.jpeg" alt="Curso Instalaciones Sanitarias" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Oficios</div>
+                                <h3>Instalaciones Sanitarias</h3>
+                                <p>Montaje de sistemas de agua fría, caliente, desagües cloacales y pluviales domiciliarios.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Curso 12 (Sueldos) -->
+                        <div class="card curso-item" onclick="openCourseModal('sueldos')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/liquidador_sueldos.jpeg" alt="Curso Liquidador de Sueldos" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Administración</div>
+                                <h3>Liquidador/a de Sueldos</h3>
+                                <p>Cálculo de haberes, convenios colectivos de trabajo, cargas sociales e indemnizaciones.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Curso 13 (Panadero) -->
+                        <div class="card curso-item" onclick="openCourseModal('panadero')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/panadero.jpeg" alt="Curso Panadero" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Gastronomía</div>
+                                <h3>Panadero/a</h3>
+                                <p>Elaboración de panes tradicionales, piezas de confitería y gestión de panificados.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Curso 14 (Soldador Unificado) -->
+                        <div class="card curso-item" onclick="openCourseModal('soldador')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/soldador.jpeg" alt="Curso Soldador" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Oficios</div>
+                                <h3>Soldador/a (Dos Turnos/Sedes)</h3>
+                                <p>Técnicas de unión metálica por arco eléctrico. Dos ofertas de cursada independientes.</p>
+                                <span class="btn-ver">Ver Sedes y Horarios <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -308,8 +401,15 @@
                         <option>Confeccionista Modista</option>
                         <option>Electricista Industrial</option>
                         <option>Inglés Tecnológico</option>
-                        <option>Informática para Administración y Gestión</option>
+                        <option>Informática para Administration y Gestión</option>
                         <option>Marketing Digital</option>
+                        <option>Elaboración de Conservas</option>
+                        <option>Cuidado de Niñas, Niños y Adolescentes</option>
+                        <option>Equipos de Climatización</option>
+                        <option>Instalaciones Sanitarias</option>
+                        <option>Liquidador/a de Sueldos</option>
+                        <option>Panadero/a</option>
+                        <option>Soldador/a</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -395,7 +495,7 @@
             coursesTrack.style.transform = `translateX(-${currentScroll}px)`;
         });
 
-        // REPOSITORIO DE DATOS DE LA TANDA 1 (MODALES)
+        // REPOSITORIO DE DATOS (MÓDALES) COMPLETO (TANDA 1 + TANDA 2)
         const infoFolletos = {
             cocinero: {
                 titulo: "Cocinero/a",
@@ -452,6 +552,71 @@
                     <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes y Martes</p>
                     <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 12:00 a 14:00 hs</p>
                     <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central</p>
+                `
+            },
+            conservas: {
+                titulo: "Operador/a en Elaboración de Conservas de Frutas y Hortalizas",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Jueves y Viernes</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 08:00 a 12:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Alfredo Carlino 6243</p>
+                `
+            },
+            cuidado_ninos: {
+                titulo: "Operador/a de Cuidado de Niñas, Niños y Adolescentes",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes, Martes y Jueves</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 13:30 a 17:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Alfredo Carlino 6243</p>
+                `
+            },
+            climatizacion: {
+                titulo: "Instalador/a y Reparador/a de Equipos de Climatización",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes, Martes y Miércoles</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 13:30 a 17:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Alfredo Carlino 6243</p>
+                `
+            },
+            sanitarias: {
+                titulo: "Montador/a de Instalaciones Sanitarias Domiciliarias",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes, Martes y Miércoles</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 13:00 a 17:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Taller de Plomería</p>
+                `
+            },
+            sueldos: {
+                titulo: "Liquidador/a de Sueldos",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes, Martes y Miércoles</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 13:00 a 17:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Alfredo Carlino 6243</p>
+                `
+            },
+            panadero: {
+                titulo: "Panadero/a",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Jueves y Viernes</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 13:00 a 17:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Taller de Panadería</p>
+                `
+            },
+            soldador: {
+                titulo: "Soldador/a (Distribución por Comisión y Sede)",
+                info: `
+                    <div style="border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 10px;">
+                        <h4 style="color:#1e3a8a; margin:0 0 5px 0;"><i class="fas fa-university"></i> Sede Central - Comisión Tarde</h4>
+                        <p style="margin:4px 0;"><i class="fas fa-calendar-day"></i> <strong>Días:</strong> Miércoles, Jueves y Viernes</p>
+                        <p style="margin:4px 0;"><i class="fas fa-clock"></i> <strong>Horario:</strong> 13:00 a 17:00 hs</p>
+                        <p style="margin:4px 0;"><i class="fas fa-map-marker-alt"></i> Alfredo Carlino 6243 - Wilde</p>
+                    </div>
+                    <div>
+                        <h4 style="color:#1e3a8a; margin:0 0 5px 0;"><i class="fas fa-university"></i> Subsede Adultos/as - Comisión Mañana</h4>
+                        <p style="margin:4px 0;"><i class="fas fa-calendar-day"></i> <strong>Días:</strong> Miércoles, Jueves y Viernes</p>
+                        <p style="margin:4px 0;"><i class="fas fa-clock"></i> <strong>Horario:</strong> 08:00 a 12:00 hs</p>
+                        <p style="margin:4px 0;"><i class="fas fa-map-marker-alt"></i> Manuel Belgrano 3739 - Sarandí</p>
+                    </div>
                 `
             }
         };
