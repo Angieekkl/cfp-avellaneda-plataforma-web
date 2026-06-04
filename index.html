@@ -6,9 +6,108 @@
     <title>CFP Avellaneda - Formación Profesional</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Ajustes de espaciado dinámico y scroll limpio */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Evita que el menú fijo tape los títulos al clickear el índice */
+        #nosotros, #oferta, #contacto {
+            scroll-margin-top: 80px;
+            padding-top: 90px !important;
+            padding-bottom: 90px !important;
+        }
+
+        /* Zona Inmersiva y Slider Mejorado */
+        .dark-immersive-zone {
+            background-color: #0f172a;
+            padding-bottom: 60px;
+        }
+
+        .info-slider-container {
+            width: 92% !important; /* Más ancho para que respire en celulares */
+            max-width: 800px;
+            margin: 30px auto 0 auto;
+            min-height: 160px; /* Evita saltos de altura raros */
+        }
+
+        .info-slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        .info-slide.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Rediseño de caja de requisitos a azul institucional */
+        .requisitos-box {
+            border: 2px dashed #1e3a8a !important;
+            background-color: #f0f4f8 !important;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 40px;
+        }
+        .requisitos-box h3 {
+            color: #1e3a8a !important;
+        }
+        .req-item {
+            background-color: #ffffff !important;
+            border: 1px solid #d1d5db;
+            color: #1e3a8a !important;
+            font-weight: 600;
+        }
+
+        /* Corrección del formulario encimado en móviles */
+        .form-container {
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        /* Unificación estética del Footer Institucional */
+        footer {
+            background-color: #111827;
+            color: #ffffff;
+            padding: 40px 20px 20px 20px;
+            margin-top: 60px;
+            border-top: 4px solid #1e3a8a;
+        }
+        .footer-info-grid {
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            text-align: left;
+        }
+        .footer-info-grid p {
+            margin: 12px 0;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #e5e7eb;
+        }
+        .footer-info-grid i {
+            color: #3b82f6;
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+        .footer-bottom-bar {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #374151;
+            font-size: 13px;
+            color: #9ca3af;
+            letter-spacing: 0.5px;
+        }
+    </style>
 </head>
 <body>
 
+    <!-- BARRA DE NAVEGACIÓN -->
     <header>
         <div class="logo">CFP Avellaneda</div>
         <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
@@ -24,16 +123,19 @@
         </nav>
     </header>
 
+    <!-- ZONA INMERSIVA OSCURA -->
     <div class="dark-immersive-zone">
         
+        <!-- BANNER PRINCIPAL (HERO) -->
         <section class="hero">
             <div class="hero-content">
-                <h1>Una escuela técnica para aprender haciendo</h1>
+                <h1>Formación profesional para tu futuro laboral</h1>
                 <p>Descubrí tu vocación en el CFP N° 404 de Avellaneda. Capacitate con certificaciones nacionales, docentes especializados y herramientas prácticas pensadas para tu inserción rápida en el mundo del trabajo actual.</p>
                 <a href="#oferta" class="btn-primary">Ver Cursos Disponibles</a>
             </div>
         </section>
 
+        <!-- SECCIÓN NOSOTROS -->
         <section id="nosotros" class="section-nosotros-institucional">
             <h2>Sobre el CFP N° 404</h2>
             <p class="section-desc-grande">La Escuela de Formación Profesional N° 404 de Avellaneda brinda una formación integral basada en el trabajo en taller, la aplicación de conocimientos científicos y tecnológicos, y la preparación de los estudiantes para continuar estudios superiores o insertarse de forma inmediata en el sector productivo regional.</p>
@@ -58,6 +160,7 @@
 
     </div>
 
+    <!-- SECCIÓN OFERTA ACADÉMICA (TANDA 1) -->
     <section id="oferta" class="section bg-light">
         
         <div class="cursos-destacados-frame">
@@ -71,6 +174,7 @@
                 <div class="carousel-container-window">
                     <div class="cards-container" id="coursesTrack">
                         
+                        <!-- Curso 1 -->
                         <div class="card curso-item" onclick="openCourseModal('cocinero')">
                             <div class="curso-img-container">
                                 <img src="css/assets/cocinero.jpeg" alt="Curso Cocinero" class="curso-foto">
@@ -83,6 +187,7 @@
                             </div>
                         </div>
                     
+                        <!-- Curso 2 -->
                         <div class="card curso-item" onclick="openCourseModal('acompanante')">
                             <div class="curso-img-container">
                                 <img src="css/assets/acompañante_terapeutico.jpeg" alt="Curso Acompañante Terapéutico" class="curso-foto">
@@ -95,6 +200,7 @@
                             </div>
                         </div>
                     
+                        <!-- Curso 3 -->
                         <div class="card curso-item" onclick="openCourseModal('modista')">
                             <div class="curso-img-container">
                                 <img src="css/assets/confeccionista_modista.jpeg" alt="Curso Confeccionista Modista" class="curso-foto">
@@ -107,6 +213,7 @@
                             </div>
                         </div>
 
+                        <!-- Curso 4 -->
                         <div class="card curso-item" onclick="openCourseModal('electricista')">
                             <div class="curso-img-container">
                                 <img src="css/assets/electricista.jpeg" alt="Curso Electricista" class="curso-foto">
@@ -119,6 +226,7 @@
                             </div>
                         </div>
 
+                        <!-- Curso 5 -->
                         <div class="card curso-item" onclick="openCourseModal('ingles')">
                             <div class="curso-img-container">
                                 <img src="css/assets/ingles_tecnologico.jpeg" alt="Curso Inglés Tecnológico" class="curso-foto">
@@ -131,6 +239,7 @@
                             </div>
                         </div>
 
+                        <!-- Curso 6 -->
                         <div class="card curso-item" onclick="openCourseModal('informatica')">
                             <div class="curso-img-container">
                                 <img src="css/assets/informatica_administracion_gestion.jpeg" alt="Curso Informática" class="curso-foto">
@@ -143,6 +252,7 @@
                             </div>
                         </div>
 
+                        <!-- Curso 7 -->
                         <div class="card curso-item" onclick="openCourseModal('marketing')">
                             <div class="curso-img-container">
                                 <img src="css/assets/marketing_digital.jpeg" alt="Curso Marketing Digital" class="curso-foto">
@@ -163,6 +273,7 @@
 
         </div>
 
+        <!-- REQUISITOS GENERALES -->
         <div class="requisitos-box">
             <h3><i class="fas fa-file-signature"></i> Requisitos Generales de Inscripción</h3>
             <div class="requisitos-grid">
@@ -174,6 +285,7 @@
         </div>
     </section>
 
+    <!-- FORMULARIO DE CONSULTAS -->
     <section id="contacto" class="section">
         <h2><i class="fas fa-envelope"></i> ¿Tenés dudas? Envianos tu consulta</h2>
         <p class="section-desc">Completá el formulario para que el equipo administrativo se contacte con vos.</p>
@@ -207,14 +319,21 @@
                 <button type="submit" class="btn-submit">Enviar Consulta</button>
             </form>
         </div>
-    
-        <div class="info-footer-contacto">
-            <p><i class="fas fa-map-marker-alt" style="color: #1e3a8a; width: 25px;"></i> <strong>Sede Central:</strong> Alfredo Carlino 6243 - Wilde, Avellaneda.</p>
-            <p><i class="fas fa-phone-alt" style="color: #1e3a8a; width: 25px;"></i> <strong>Teléfono:</strong> 4236-7187 / 7722-5375</p>
-            <p><i class="fas fa-envelope" style="color: #1e3a8a; width: 25px;"></i> <strong>Email Oficial:</strong> cfp404avellaneda@abc.gob.ar</p>
-        </div>
     </section>
 
+    <!-- FOOTER UNIFICADO INSTITUCIONAL -->
+    <footer>
+        <div class="footer-info-grid">
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Sede Central:</strong> Alfredo Carlino 6243 - Wilde, Avellaneda.</p>
+            <p><i class="fas fa-phone-alt"></i> <strong>Teléfono:</strong> 4236-7187 / 7722-5375</p>
+            <p><i class="fas fa-envelope"></i> <strong>Email Oficial:</strong> cfp404avellaneda@abc.gob.ar</p>
+        </div>
+        <div class="footer-bottom-bar">
+            © 2026 CFP Avellaneda - Diseñado por el Equipo de Prácticas Profesionalizantes
+        </div>
+    </footer>
+
+    <!-- VENTANA MODAL FLOTANTE -->
     <div id="courseModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -223,6 +342,7 @@
         </div>
     </div>
 
+    <!-- SCRIPTS DE INTERACCIÓN -->
     <script>
         const menuToggle = document.getElementById('menuToggle');
         const navMenu = document.getElementById('navMenu');
@@ -242,6 +362,7 @@
             navMenu.classList.remove('open');
         }
 
+        // CONTROL LÓGICO DEL SLIDER (NOSOTROS) CORREGIDO
         let infoIndex = 0;
         const infoSlides = document.querySelectorAll('.info-slide');
 
@@ -250,9 +371,10 @@
             infoIndex += direction;
             if (infoIndex >= infoSlides.length) { infoIndex = 0; }
             if (infoIndex < 0) { infoIndex = infoSlides.length - 1; }
-            infoSlides[infoIndex].add('active');
+            infoSlides[infoIndex].classList.add('active');
         }
 
+        // CAROUSEL DE CURSOS
         const coursesTrack = document.getElementById('coursesTrack');
         const prevBtn = document.getElementById('coursesPrev');
         const nextBtn = document.getElementById('coursesNext');
@@ -278,59 +400,58 @@
             cocinero: {
                 titulo: "Cocinero/a",
                 info: `
-                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes, Miércoles y Jueves</p>
-                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 17:30 a 21:00 hs</p>
-                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar de cursada:</strong> Sede Central - Entorno Cocina Profesional</p>
-                    <div class="modal-alert"><i class="fas fa-utensils"></i> Incluye módulo oficial de manipulación higiénica de alimentos con validez para todo el territorio provincial.</div>
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Martes y Miércoles</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 08:00 a 12:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Alfredo Carlino 6243</p>
                 `
             },
             acompanante: {
                 titulo: "Acompañante Terapéutico",
                 info: `
-                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Martes y Viernes</p>
-                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 18:00 a 21:30 hs</p>
-                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar de cursada:</strong> Sede Central</p>
-                    <div class="modal-alert"><i class="fas fa-info-circle"></i> Curso teórico-práctico orientado al ámbito de la salud y la inserción asistencial.</div>
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes, Martes, Jueves y Viernes</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 08:00 a 12:00 hs</p>
+                    <p><i class="fas fa-info-circle"></i> Orientado según resolución nro. resol-2021-1986-apn-me</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central</p>
                 `
             },
             modista: {
-                titulo: "Confeccionista Modista",
+                titulo: "Confeccionista a medida / Modista",
                 info: `
                     <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Miércoles, Jueves y Viernes</p>
-                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 13:30 a 17:00 hs</p>
-                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar de cursada:</strong> Sede Central - Taller Textil</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 08:30 a 11:45 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Taller Textil</p>
                 `
             },
             electricista: {
-                titulo: "Electricista Industrial",
+                titulo: "Montador/a Electricista Domiciliario",
                 info: `
-                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes, Martes y Jueves</p>
-                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 18:30 a 22:00 hs</p>
-                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar de cursada:</strong> Sede Central - Talleres de Fuerza Motriz</p>
+                    <p><i class="fas fa-calendar-day"></i> <strong>Turno Mañana:</strong> Lu - Ma y Mi de 8:30 a 12:30 hs</p>
+                    <p><i class="fas fa-clock"></i> <strong>Turno Tarde:</strong> Lu - Ma y Mi de 13:00 a 17:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Alfredo Carlino 6243</p>
                 `
             },
             ingles: {
-                titulo: "Inglés Tecnológico",
+                titulo: "Inglés para el Tecnología Digital Nivel I y II",
                 info: `
-                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes y Miércoles</p>
-                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 19:00 a 21:30 hs</p>
-                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar de cursada:</strong> Aula de Medios - Sede Central</p>
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes, Martes y Miércoles</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 08:30 a 12:30 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Aula Digital</p>
                 `
             },
             informatica: {
-                titulo: "Informática para Administración y Gestión",
+                titulo: "Operador/a de Informática para Administración y Gestión",
                 info: `
-                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Martes y Jueves</p>
-                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 08:30 a 11:30 hs (Turno Mañana)</p>
-                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar de cursada:</strong> Sede Central - Laboratorio de Computación</p>
+                    <p><i class="fas fa-calendar-day"></i> <strong>Turno Mañana:</strong> Lu - Ma y Mi de 8:30 a 12:30 hs</p>
+                    <p><i class="fas fa-clock"></i> <strong>Turno Noche:</strong> Lu - Mi y Vie de 18:00 a 22:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central</p>
                 `
             },
             marketing: {
-                titulo: "Marketing Digital",
+                titulo: "Operador/a de Herramientas de Marketing Digital",
                 info: `
-                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Jueves y Viernes</p>
-                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 14:00 a 17:00 hs</p>
-                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar de cursada:</strong> Aula Multimedia / Entorno Virtual</p>
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes y Martes</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 12:00 a 14:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central</p>
                 `
             }
         };
