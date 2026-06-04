@@ -1,4 +1,4 @@
-/* Estilos Globales */
+/* Estilos Globales Potenciados */
 * {
     margin: 0;
     padding: 0;
@@ -10,46 +10,52 @@ body {
     color: #333;
     line-height: 1.6;
     background-color: #f9f9f9;
+    font-size: 16px; /* Aumento global de base tipográfica */
 }
 
-/* Navegación */
+/* Navegación Fija */
 header {
-    background: #1e3a8a; /* Azul institucional */
+    background: #1e3a8a;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
+    padding: 1.2rem 5%;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 header .logo {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 
-/* Botón Hamburguesa Oculto por defecto */
+/* Botón Hamburguesa Estilo Técnico */
 .menu-toggle {
     display: none;
     background: none;
     border: none;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
+    z-index: 1001;
+    padding: 0.25rem;
 }
 
 nav ul {
     display: flex;
     list-style: none;
+    gap: 0.5rem;
 }
 
 nav ul li a {
     color: #cbd5e1;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 nav ul li a:hover, nav ul li a.active {
@@ -57,85 +63,79 @@ nav ul li a:hover, nav ul li a.active {
     border-bottom: 2px solid #3b82f6;
 }
 
-/* Hero Section */
+/* ZONA INMERSIVA OSCURA (HERO + NOSOTROS - COMBINACIÓN IMAGEN 3) */
+.dark-immersive-zone {
+    background: linear-gradient(to bottom, #1e3a8a 0%, #111827 100%);
+    color: white;
+    padding-bottom: 5rem;
+}
+
+/* Hero Section Ajustado */
 .hero {
-    background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(17, 24, 39, 0.8)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-    height: 60vh;
+    background: linear-gradient(rgba(30, 58, 138, 0.45), rgba(17, 24, 39, 0.6)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
 }
 
 .hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
 }
 
 .hero-content p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    color: #e2e8f0;
-    max-width: 800px;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #cbd5e1;
+    max-width: 850px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.btn-primary {
-    background: #3b82f6;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.btn-primary:hover {
-    background: #2563eb;
-}
-
-/* Secciones */
-.section {
-    padding: 4rem 5%;
+/* SECCIÓN SOBRE EL CFP INTEGRADA (ESTILO TÉCNICA 6) */
+.section-nosotros-institucional {
+    padding: 2rem 8%;
     text-align: center;
 }
 
-.section-desc {
-    max-width: 700px;
-    margin: 0 auto 2rem auto;
-    color: #475569;
-}
-
-.bg-light {
-    background-color: #f1f5f9;
-}
-
-.section h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #1e3a8a;
-}
-
-/* NUEVO SLIDER ESTILO TÉCNICA 6 (NOSOTROS) */
-.info-slider-container {
-    background-color: #1e293b; /* Fondo azul oscuro integrado */
+.section-nosotros-institucional h2 {
+    font-size: 2.4rem;
     color: white;
-    max-width: 650px;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.section-desc-grande {
+    max-width: 850px;
+    margin: 0 auto 3rem auto;
+    color: #e2e8f0;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* CAJA DESLIZABLE ESTILO REGENERADO */
+.info-slider-container {
+    background-color: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(5px);
+    color: white;
+    max-width: 750px;
     margin: 2rem auto 0 auto;
-    padding: 2rem;
-    border-radius: 8px;
-    border-left: 5px solid #10b981; /* Borde de acento izquierdo */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border-left: 6px solid #10b981; /* Borde izquierdo idéntico a referencia */
+    box-sizing: border-box;
     position: relative;
-    overflow: hidden;
 }
 
 .info-slider-track {
     position: relative;
-    height: 120px; /* Tamaño controlado */
+    min-height: 140px; /* Evita saltos bruscos de altura */
 }
 
 .info-slide {
@@ -144,30 +144,32 @@ nav ul li a:hover, nav ul li a.active {
     left: 0;
     width: 100%;
     opacity: 0;
-    transform: scale(0.95);
-    transition: all 0.5s ease-in-out;
+    transform: translateX(15px);
+    transition: all 0.4s ease-in-out;
     text-align: left;
     pointer-events: none;
 }
 
 .info-slide.active {
     opacity: 1;
-    transform: scale(1);
+    transform: translateX(0);
     pointer-events: auto;
+    position: relative;
 }
 
 .info-slide h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: white;
     display: flex;
     align-items: center;
     gap: 0.75rem;
 }
 
 .info-slide p {
-    color: #94a3b8;
-    font-size: 0.95rem;
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .text-success {
@@ -177,67 +179,89 @@ nav ul li a:hover, nav ul li a.active {
 .slider-controls {
     display: flex;
     justify-content: flex-end;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
 }
 
 .slider-arrow {
-    background: #334155;
+    background: rgba(255, 255, 255, 0.15);
     border: none;
     color: white;
-    width: 32px;
-    height: 32px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.3s;
+    font-size: 1.1rem;
+    transition: all 0.2s;
 }
 
 .slider-arrow:hover {
     background: #10b981;
+    transform: scale(1.05);
 }
 
-/* ESTRUCTURA DEL CARRUSEL DE CURSOS (OFERTA ACADÉMICA) */
+/* MARCO CONTENEDOR DE CURSOS DE ALTO RESALTE (IMAGEN 2) */
+.cursos-destacados-frame {
+    border: 3px solid #1e3a8a; /* Marco azul de realce */
+    background: #ffffff;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    max-width: 1240px;
+    margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(30, 58, 138, 0.08);
+}
+
+.section h2 {
+    font-size: 2.2rem;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+}
+
+.subtitulo-cursos {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-bottom: 2.5rem;
+}
+
+/* CONFIGURACIÓN DEL CARRETE DEL CARRUSEL */
 .carousel-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1200px;
-    margin: 2rem auto;
     position: relative;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .carousel-container-window {
     overflow: hidden;
     width: 100%;
-    padding: 1rem 0;
+    padding: 1rem 0.5rem;
 }
 
 .cards-container {
     display: flex;
     justify-content: flex-start;
     gap: 2rem;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     width: max-content;
 }
 
-/* Tarjeta individual */
+/* Estilos Robustos de la Tarjeta */
 .card {
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    width: 290px; /* Ajuste milimétrico para celulares */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    width: 320px; /* Un poco más anchas para mayor impacto */
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(30, 58, 138, 0.15);
 }
 
 .card.curso-item {
@@ -245,11 +269,12 @@ nav ul li a:hover, nav ul li a.active {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    border-bottom: 4px solid #1e3a8a;
 }
 
 .curso-img-container {
     width: 100%;
-    height: 170px;
+    height: 190px;
     overflow: hidden;
 }
 
@@ -260,144 +285,163 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .curso-card-body {
-    padding: 1.25rem;
+    padding: 1.5rem;
 }
 
 .card h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     color: #1e3a8a;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
 .card p {
-    font-size: 0.9rem;
-    color: #64748b;
-    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #475569;
+    margin-bottom: 1.5rem;
 }
 
 .btn-ver {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: #3b82f6;
     font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .curso-badge {
     background-color: #1e3a8a;
     color: white;
-    padding: 0.2rem 0.5rem;
-    font-size: 0.7rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
     font-weight: bold;
     border-radius: 4px;
     display: inline-block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     text-transform: uppercase;
 }
 
 .carousel-btn {
-    background: white;
-    border: 1px solid #cbd5e1;
-    color: #1e3a8a;
-    width: 40px;
-    height: 40px;
+    background: #1e3a8a;
+    border: none;
+    color: white;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.3s, color 0.3s;
+    font-size: 1.1rem;
+    transition: all 0.2s;
 }
 
 .carousel-btn:hover {
-    background: #1e3a8a;
+    background: #3b82f6;
+    transform: scale(1.1);
+}
+
+/* Elementos Comunes del Botón */
+.btn-primary {
+    background: #3b82f6;
     color: white;
+    padding: 0.85rem 2rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: #2563eb;
 }
 
 /* Caja de Requisitos */
 .requisitos-box {
     background: white;
-    max-width: 800px;
-    margin: 3rem auto 0 auto;
-    padding: 2rem;
-    border-radius: 10px;
+    max-width: 850px;
+    margin: 4rem auto 0 auto;
+    padding: 2.5rem;
+    border-radius: 12px;
     border: 2px dashed #3b82f6;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
 
 .requisitos-box h3 {
     color: #1e3a8a;
     margin-bottom: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .requisitos-grid {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
 .req-item {
     background: #f1f5f9;
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
+    padding: 0.85rem 1.5rem;
+    border-radius: 8px;
     font-weight: 600;
     color: #334155;
+    font-size: 1rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.6rem;
 }
 
 .horario-atencion {
-    font-size: 0.95rem;
-    color: #64748b;
+    font-size: 1rem;
+    color: #475569;
 }
 
 /* Estilos de Formulario */
 .form-container {
     background: #ffffff;
-    max-width: 600px;
+    max-width: 650px;
     margin: 2rem auto 0 auto;
     padding: 2.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     text-align: left;
 }
 
 .form-group {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
 }
 
 .form-group label {
     display: block;
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
     color: #1e3a8a;
+    font-size: 1.05rem;
 }
 
 .form-group input, .form-group select, .form-group textarea {
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.85rem;
     border: 1px solid #cbd5e1;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-    outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+    border-radius: 6px;
+    font-size: 1.05rem;
 }
 
 .btn-submit {
     background: #10b981;
     color: white;
     border: none;
-    padding: 0.75rem 2rem;
-    font-size: 1rem;
+    padding: 0.9rem 2rem;
+    font-size: 1.1rem;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     width: 100%;
     transition: background 0.3s;
@@ -408,22 +452,23 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .info-footer-contacto {
-    margin-top: 3rem; 
-    font-size: 1.1rem; 
+    margin-top: 4rem; 
+    font-size: 1.15rem; 
     border-top: 1px solid #e2e8f0; 
-    padding-top: 2rem; 
+    padding-top: 2.5rem; 
     text-align: center;
+    line-height: 1.8;
 }
 
-/* ESTILOS DE LA VENTANA MODAL (SOLUCIÓN AL ERROR DEL FILTRADO) */
+/* VENTANA MODAL (RESGUARDADA) */
 .modal {
-    display: none; /* ESCONDE EL CONTENIDO INICIALMENTE */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.65);
     z-index: 2000;
     justify-content: center;
     align-items: center;
@@ -433,117 +478,124 @@ nav ul li a:hover, nav ul li a.active {
 .modal-content {
     background-color: white;
     padding: 2.5rem;
-    border-radius: 12px;
-    max-width: 550px;
+    border-radius: 14px;
+    max-width: 580px;
     width: 100%;
     position: relative;
     text-align: left;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    animation: fadeInModal 0.3s ease-out;
-}
-
-@keyframes fadeInModal {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
 }
 
 .close-btn {
     position: absolute;
-    top: 1rem;
+    top: 1.2rem;
     right: 1.5rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #94a3b8;
     cursor: pointer;
-    transition: color 0.2s;
-}
-
-.close-btn:hover {
-    color: #334155;
 }
 
 #modalTitle {
     color: #1e3a8a;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 1.5rem;
     border-bottom: 2px solid #f1f5f9;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.6rem;
 }
 
 #modalBody p {
-    margin-bottom: 0.75rem;
-    font-size: 1rem;
+    margin-bottom: 0.9rem;
+    font-size: 1.05rem;
     color: #334155;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-}
-
-#modalBody i {
-    color: #3b82f6;
-    width: 20px;
+    gap: 0.6rem;
 }
 
 .modal-alert {
     margin-top: 1.5rem;
     background-color: #eff6ff;
     border-left: 4px solid #3b82f6;
-    padding: 0.75rem;
-    font-size: 0.85rem;
+    padding: 0.85rem;
+    font-size: 0.9rem;
     color: #1e40af;
     font-weight: 500;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.6rem;
 }
 
-.modal-alert i {
-    color: #1e40af !important;
-}
-
-/* Footer */
 footer {
     background: #111827;
     color: #9ca3af;
     text-align: center;
-    padding: 1.5rem;
-    font-size: 0.9rem;
+    padding: 2rem;
+    font-size: 1rem;
 }
 
-/* RESPONSIVE DESIGN: MENÚ HAMBURGUESA Y ADAPTACIONES */
-@media (max-width: 768px) {
+/* MEDIA QUERIES REDISEÑADOS PARA PANTALLAS DE ALTA DENSIDAD (MÓVIL) */
+@media (max-width: 1024px) {
     .menu-toggle {
-        display: block; /* Muestra el botón de tres líneas */
+        display: block; /* Forzado de hamburguesa para tablets y móviles modernos */
     }
 
     nav {
         position: fixed;
-        top: 60px;
-        right: -100%; /* Escondido por defecto a la derecha */
-        width: 250px;
-        height: calc(100vh - 60px);
+        top: 65px;
+        right: -100%;
+        width: 280px;
+        height: calc(100vh - 65px);
         background: #1e3a8a;
-        box-shadow: -4px 0 10px rgba(0,0,0,0.1);
-        transition: right 0.3s ease-in-out;
+        box-shadow: -6px 0 15px rgba(0,0,0,0.25);
+        transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 999;
     }
 
     nav.open {
-        right: 0; /* Despliega el menú lateral */
+        right: 0;
     }
 
     nav ul {
         flex-direction: column;
-        padding: 2rem;
-        gap: 1.5rem;
+        padding: 3rem 2rem;
+        gap: 2rem;
     }
 
     nav ul li a {
-        font-size: 1.2rem;
+        font-size: 1.3rem; /* Letras cómodas para tocar con el dedo */
         display: block;
         width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        padding-bottom: 0.75rem;
+    }
+
+    /* AMPLITUD ABSOLUTA EN MÓVIL */
+    .hero-content h1 { font-size: 2.1rem; }
+    .section-nosotros-institucional h2 { font-size: 2rem; }
+    .section-desc-grande { font-size: 1.1rem; }
+    
+    .info-slider-container {
+        padding: 1.5rem;
     }
     
-    .info-slider-track {
-        height: 160px; /* Más margen de altura en móvil por rotación de texto */
+    .info-slide h3 { font-size: 1.3rem; }
+    .info-slide p { font-size: 1rem; }
+
+    /* REDISEÑO DEL CARRUSEL EN CELULARES */
+    .cursos-destacados-frame {
+        padding: 2rem 1rem;
+    }
+    
+    .card {
+        width: 78vw; /* Ocupa el 78% de la pantalla para ver el siguiente al lado */
+    }
+    
+    .carousel-btn {
+        display: none; /* En celular se navega deslizando lateralmente de forma natural */
+    }
+    
+    .carousel-container-window {
+        overflow-x: auto; /* Permite scroll táctil fluido */
+        -webkit-overflow-scrolling: touch;
     }
 }

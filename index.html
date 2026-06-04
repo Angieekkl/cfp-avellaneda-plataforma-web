@@ -9,10 +9,8 @@
 </head>
 <body>
 
-    <!-- BARRA DE NAVEGACIÓN -->
     <header>
         <div class="logo">CFP Avellaneda</div>
-        <!-- Botón de Hamburguesa para Mobile -->
         <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
             <i class="fas fa-bars"></i>
         </button>
@@ -26,110 +24,145 @@
         </nav>
     </header>
 
-    <!-- BANNER PRINCIPAL (HERO) -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Formación Profesional para tu Futuro Laboral</h1>
-            <p>Descubrí tu vocación en el CFP N° 404 de Avellaneda. Capacitate con certificaciones nacionales, docentes especializados y herramientas prácticas pensadas para tu inserción en el mundo del trabajo hoy mismo.</p>
-            <a href="#oferta" class="btn-primary">Ver Cursos</a>
-        </div>
-    </section>
+    <div class="dark-immersive-zone">
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Una escuela técnica para aprender haciendo</h1>
+                <p>Descubrí tu vocación en el CFP N° 404 de Avellaneda. Capacitate con certificaciones nacionales, docentes especializados y herramientas prácticas pensadas para tu inserción rápida en el mundo del trabajo actual.</p>
+                <a href="#oferta" class="btn-primary">Ver Cursos Disponibles</a>
+            </div>
+        </section>
 
-    <!-- SECCIÓN NOSOTROS (BLOQUE INTERACTIVO ESTILO TÉCNICA 6) -->
-    <section id="nosotros" class="section">
-        <h2>Sobre el CFP N° 404</h2>
-        <p class="section-desc">Somos una institución pública orientada a la educación de jóvenes y adultos en Avellaneda. Nuestra propuesta se centra en brindar herramientas teóricas y prácticas para una inserción laboral efectiva a través de capacitaciones de corta duración.</p>
-    
-        <!-- Bloque Integrado Deslizable -->
-        <div class="info-slider-container">
-            <div class="info-slider-track" id="infoTrack">
-                <!-- Slide 1 -->
-                <div class="info-slide active">
-                    <h3><i class="fas fa-certificate text-success"></i> Certificación Nacional</h3>
-                    <p>Todos nuestros cursos cuentan con títulos oficiales y reconocimiento a nivel nacional, respaldando tu futuro profesional con aval del Ministerio de Educación.</p>
+        <section id="nosotros" class="section-nosotros-institucional">
+            <h2>Sobre el CFP N° 404</h2>
+            <p class="section-desc-grande">La Escuela de Formación Profesional N° 404 de Avellaneda brinda una formación integral basada en el trabajo en taller, la aplicación de conocimientos científicos y tecnológicos, y la preparación de los estudiantes para continuar estudios superiores o insertarse de forma inmediata en el sector productivo regional.</p>
+        
+            <div class="info-slider-container">
+                <div class="info-slider-track">
+                    <div class="info-slide active">
+                        <h3><i class="fas fa-certificate text-success"></i> Certificación Nacional</h3>
+                        <p>Un espacio preparado para crecer, comunicar, orientar y fortalecer el vínculo entre escuela, estudiantes y el sector socioproductivo con títulos oficiales nacionales.</p>
+                    </div>
+                    <div class="info-slide">
+                        <h3><i class="fas fa-clock text-success"></i> Horarios Flexibles</h3>
+                        <p>Contamos con trayectos formativos adaptados con franjas horarias extendidas, ofertas en turno tarde y vespertino ideales para trabajadores y adultos.</p>
+                    </div>
                 </div>
-                <!-- Slide 2 -->
-                <div class="info-slide">
-                    <h3><i class="fas fa-clock text-success"></i> Horarios Flexibles</h3>
-                    <p>Contamos con franjas horarias extendidas, turnos tarde y cursos vespertinos pensados especialmente para que puedas estudiar sin descuidar tus horarios laborales.</p>
+                <div class="slider-controls">
+                    <button class="slider-arrow" onclick="moveInfoSlider(-1)" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-arrow" onclick="moveInfoSlider(1)" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
-            <!-- Controles del Bloque Despachador -->
-            <div class="slider-controls">
-                <button class="slider-arrow" onclick="moveInfoSlider(-1)" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-                <button class="slider-arrow" onclick="moveInfoSlider(1)" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SECCIÓN OFERTA ACADÉMICA (CARRUSEL DE CURSOS DE ANCHO FIJO) -->
+    </div>
+
     <section id="oferta" class="section bg-light">
-        <h2><i class="fas fa-graduation-cap"></i> Cursos Destacados</h2>
-        <p>Hacé clic en cualquiera de nuestras capacitaciones oficiales para ver los detalles de cursada.</p>
-    
-        <div class="carousel-wrapper">
-            <button class="carousel-btn prev" id="coursesPrev" aria-label="Curso anterior"><i class="fas fa-chevron-left"></i></button>
+        
+        <div class="cursos-destacados-frame">
             
-            <div class="carousel-container-window">
-                <div class="cards-container" id="coursesTrack">
-                    <!-- Curso 1 -->
-                    <div class="card curso-item" onclick="openCourseModal('diseno')">
-                        <div class="curso-img-container">
-                            <img src="css/assets/curso_diseño_grafico.jpeg" alt="Curso Diseño Gráfico" class="curso-foto">
-                        </div>
-                        <div class="curso-card-body">
-                            <div class="curso-badge">Informática</div>
-                            <h3>Diseño Gráfico en Sistemas Informáticos</h3>
-                            <p>Nivel I y II. Subsede de 16 a 23 años.</p>
-                            <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
-                        </div>
-                    </div>
+            <h2><i class="fas fa-graduation-cap"></i> Cursos Destacados</h2>
+            <p class="subtitulo-cursos">Hacé clic en cualquiera de nuestras capacitaciones oficiales para ver los detalles de cursada, horarios y requisitos específicos de inscripción.</p>
+        
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev" id="coursesPrev" aria-label="Curso anterior"><i class="fas fa-chevron-left"></i></button>
                 
-                    <!-- Curso 2 -->
-                    <div class="card curso-item" onclick="openCourseModal('programacion')">
-                        <div class="curso-img-container">
-                            <img src="css/assets/pensamiento_computacional.jpeg" alt="Curso Programación" class="curso-foto">
+                <div class="carousel-container-window">
+                    <div class="cards-container" id="coursesTrack">
+                        
+                        <div class="card curso-item" onclick="openCourseModal('cocinero')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/cocinero.jpeg" alt="Curso Cocinero" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Gastronomía</div>
+                                <h3>Cocinero/a</h3>
+                                <p>Formación integral en técnicas culinarias, manipulación de alimentos y gestión de cocina.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
                         </div>
-                        <div class="curso-card-body">
-                            <div class="curso-badge">Informática</div>
-                            <h3>Pensamiento Computacional / Programación</h3>
-                            <p>Estrategias de código y lógica. Subsede de 16 a 23 años.</p>
-                            <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                    
+                        <div class="card curso-item" onclick="openCourseModal('acompanante')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/acompañante_terapeutico.jpeg" alt="Curso Acompañante Terapéutico" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Salud</div>
+                                <h3>Acompañante Terapéutico</h3>
+                                <p>Herramientas teóricas y prácticas para el cuidado, contención y asistencia de pacientes.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
                         </div>
-                    </div>
-                
-                    <!-- Curso 3 -->
-                    <div class="card curso-item" onclick="openCourseModal('herrero')">
-                        <div class="curso-img-container">
-                            <img src="css/assets/curso_herrero.jpeg" alt="Curso Herrería" class="curso-foto">
+                    
+                        <div class="card curso-item" onclick="openCourseModal('modista')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/confeccionista_modista.jpeg" alt="Curso Confeccionista Modista" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Textil</div>
+                                <h3>Confeccionista Modista</h3>
+                                <p>Diseño, moldería avanzada y técnicas de costura industrial y alta costura.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
                         </div>
-                        <div class="curso-card-body">
-                            <div class="curso-badge">Oficios</div>
-                            <h3>Herrero/a</h3>
-                            <p>Formación técnica profesional con salida laboral en Wilde.</p>
-                            <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
-                        </div>
-                    </div>
 
-                    <!-- Curso 4 -->
-                    <div class="card curso-item" onclick="openCourseModal('modista')">
-                        <div class="curso-img-container">
-                            <img src="css/assets/curso_modista.jpeg" alt="Curso Alta Costura" class="curso-foto">
+                        <div class="card curso-item" onclick="openCourseModal('electricista')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/electricista.jpeg" alt="Curso Electricista" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Oficios</div>
+                                <h3>Electricista Industrial</h3>
+                                <p>Montaje de tableros eléctricos, conexiones de fuerza motriz y automatización técnica.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
                         </div>
-                        <div class="curso-card-body">
-                            <div class="curso-badge">Textil</div>
-                            <h3>Modista de Alta Costura</h3>
-                            <p>Diseño, moldería y confección industrial en sede central.</p>
-                            <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+
+                        <div class="card curso-item" onclick="openCourseModal('ingles')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/ingles_tecnologico.jpeg" alt="Curso Inglés Tecnológico" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Idiomas</div>
+                                <h3>Inglés Tecnológico</h3>
+                                <p>Vocabulario especializado orientado al desarrollo técnico, informática y manuales de sistemas.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
                         </div>
+
+                        <div class="card curso-item" onclick="openCourseModal('informatica')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/informatica_administracion_gestion.jpeg" alt="Curso Informática" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Informática</div>
+                                <h3>Informática para Administración y Gestión</h3>
+                                <p>Operación de planillas de cálculo de alta complejidad, bases de datos y gestión comercial digital.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="card curso-item" onclick="openCourseModal('marketing')">
+                            <div class="curso-img-container">
+                                <img src="css/assets/marketing_digital.jpeg" alt="Curso Marketing Digital" class="curso-foto">
+                            </div>
+                            <div class="curso-card-body">
+                                <div class="curso-badge">Comercial</div>
+                                <h3>Marketing Digital</h3>
+                                <p>Estrategias de contenido, administración de redes sociales y pauta publicitaria para emprendimientos.</p>
+                                <span class="btn-ver">Ver Horarios e Inscripción <i class="fas fa-arrow-down"></i></span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+
+                <button class="carousel-btn next" id="coursesNext" aria-label="Siguiente curso"><i class="fas fa-chevron-right"></i></button>
             </div>
 
-            <button class="carousel-btn next" id="coursesNext" aria-label="Siguiente curso"><i class="fas fa-chevron-right"></i></button>
         </div>
 
-        <!-- REQUISITOS -->
         <div class="requisitos-box">
             <h3><i class="fas fa-file-signature"></i> Requisitos Generales de Inscripción</h3>
             <div class="requisitos-grid">
@@ -141,13 +174,12 @@
         </div>
     </section>
 
-    <!-- FORMULARIO DE CONSULTA -->
     <section id="contacto" class="section">
         <h2><i class="fas fa-envelope"></i> ¿Tenés dudas? Envianos tu consulta</h2>
-        <p>Completá el formulario para que el equipo administrativo se contacte con vos.</p>
+        <p class="section-desc">Completá el formulario para que el equipo administrativo se contacte con vos.</p>
     
         <div class="form-container">
-            <form onsubmit="event.preventDefault(); alert('¡Simulación de envío! Esta función se integrará en la fase final con base de datos.');">
+            <form onsubmit="event.preventDefault(); alert('¡Simulación de envío con éxito!');">
                 <div class="form-group">
                     <label for="nombre">Nombre y Apellido:</label>
                     <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
@@ -159,11 +191,13 @@
                 <div class="form-group">
                     <label for="curso-interes">Curso de interés:</label>
                     <select id="curso-interes">
-                        <option>Pensamiento Computacional / Programación</option>
-                        <option>Diseño Gráfico en Sistemas</option>
-                        <option>Herrero/a</option>
-                        <option>Modista de Alta Costura</option>
-                        <option>Otros cursos (Consultar cartelera)</option>
+                        <option>Cocinero/a</option>
+                        <option>Acompañante Terapéutico</option>
+                        <option>Confeccionista Modista</option>
+                        <option>Electricista Industrial</option>
+                        <option>Inglés Tecnológico</option>
+                        <option>Informática para Administración y Gestión</option>
+                        <option>Marketing Digital</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -181,7 +215,6 @@
         </div>
     </section>
 
-    <!-- VENTANA MODAL FLOTANTE (CORREGIDA) -->
     <div id="courseModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -190,93 +223,114 @@
         </div>
     </div>
 
-    <!-- SCRIPT DE INTERACCIONES -->
     <script>
-        // CONTROL DEL NAVBAR LATERAL (MOBILE)
         const menuToggle = document.getElementById('menuToggle');
         const navMenu = document.getElementById('navMenu');
 
-        menuToggle.addEventListener('click', () => {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             navMenu.classList.toggle('open');
         });
 
-        function toggleMenu() {
-            if (navMenu.classList.contains('open')) {
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
                 navMenu.classList.remove('open');
             }
+        });
+
+        function toggleMenu() {
+            navMenu.classList.remove('open');
         }
 
-        // CONTROL DEL SLIDER "SOBRE NOSOTROS" (ESTILO TÉCNICA 6)
         let infoIndex = 0;
         const infoSlides = document.querySelectorAll('.info-slide');
 
         function moveInfoSlider(direction) {
             infoSlides[infoIndex].classList.remove('active');
             infoIndex += direction;
-            
             if (infoIndex >= infoSlides.length) { infoIndex = 0; }
             if (infoIndex < 0) { infoIndex = infoSlides.length - 1; }
-            
-            infoSlides[infoIndex].classList.add('active');
+            infoSlides[infoIndex].add('active');
         }
 
-        // CONTROL DEL CARRUSEL DE CURSOS
         const coursesTrack = document.getElementById('coursesTrack');
         const prevBtn = document.getElementById('coursesPrev');
         const nextBtn = document.getElementById('coursesNext');
         let currentScroll = 0;
 
         nextBtn.addEventListener('click', () => {
-            const cardWidth = document.querySelector('.card.curso-item').offsetWidth + 32; // Ancho + gap
+            const cardElement = document.querySelector('.card.curso-item');
+            const cardWidth = cardElement.offsetWidth + parseInt(window.getComputedStyle(coursesTrack).gap);
             const maxScroll = coursesTrack.scrollWidth - coursesTrack.parentElement.offsetWidth;
             currentScroll = Math.min(currentScroll + cardWidth, maxScroll);
             coursesTrack.style.transform = `translateX(-${currentScroll}px)`;
         });
 
         prevBtn.addEventListener('click', () => {
-            const cardWidth = document.querySelector('.card.curso-item').offsetWidth + 32;
+            const cardElement = document.querySelector('.card.curso-item');
+            const cardWidth = cardElement.offsetWidth + parseInt(window.getComputedStyle(coursesTrack).gap);
             currentScroll = Math.max(currentScroll - cardWidth, 0);
             coursesTrack.style.transform = `translateX(-${currentScroll}px)`;
         });
 
-        // CONTROL DEL VENTANAL MODAL CON VECTORES EN VEZ DE EMOJIS
+        // REPOSITORIO DE DATOS DE LA TANDA 1 (MODALES)
         const infoFolletos = {
-            diseno: {
-                titulo: "Diseño Gráfico en Sistemas Informáticos (Nivel I y II)",
+            cocinero: {
+                titulo: "Cocinero/a",
                 info: `
-                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes, Martes y Miércoles</p>
-                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 13:30 a 17:00 hs</p>
-                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Subsede (Orientado a jóvenes de 16 a 23 años)</p>
-                    <p><i class="fas fa-phone"></i> <strong>Contacto de Subsede:</strong> 7722-5375 / 4204-7128</p>
-                    <div class="modal-alert"><i class="fas fa-shield-alt"></i> Certificación oficial de la Dirección General de Cultura y Educación de la Prov. de Buenos Aires.</div>
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes, Miércoles y Jueves</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 17:30 a 21:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar de cursada:</strong> Sede Central - Entorno Cocina Profesional</p>
+                    <div class="modal-alert"><i class="fas fa-utensils"></i> Incluye módulo oficial de manipulación higiénica de alimentos con validez para todo el territorio provincial.</div>
                 `
             },
-            programacion: {
-                titulo: "Pensamiento Computacional / Programación",
+            acompanante: {
+                titulo: "Acompañante Terapéutico",
                 info: `
-                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Jueves y Viernes</p>
-                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 13:30 a 16:30 hs</p>
-                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Subsede (Orientado a jóvenes de 16 a 23 años)</p>
-                    <p><i class="fas fa-phone"></i> <strong>Contacto de Subsede:</strong> 7722-5375 / 4204-7128</p>
-                    <div class="modal-alert"><i class="fas fa-code"></i> Introducción clave al desarrollo de software y lógica algorítmica.</div>
-                `
-            },
-            herrero: {
-                titulo: "Curso Profesional de Herrero/a",
-                info: `
-                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Martes, Miércoles y Jueves</p>
-                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 18:00 a 22:00 hs (Franja Vespertina ideal trabajadores)</p>
-                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Alfredo Carlino 6243, Wilde</p>
-                    <p><i class="fas fa-envelope"></i> <strong>Contacto:</strong> cfp404avellaneda@abc.gob.ar</p>
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Martes y Viernes</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 18:00 a 21:30 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar de cursada:</strong> Sede Central</p>
+                    <div class="modal-alert"><i class="fas fa-info-circle"></i> Curso teórico-práctico orientado al ámbito de la salud y la inserción asistencial.</div>
                 `
             },
             modista: {
-                titulo: "Modista de Alta Costura",
+                titulo: "Confeccionista Modista",
                 info: `
                     <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Miércoles, Jueves y Viernes</p>
                     <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 13:30 a 17:00 hs</p>
-                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Sede Central - Alfredo Carlino 6243, Wilde</p>
-                    <p><i class="fas fa-phone"></i> <strong>Teléfono Sede:</strong> 4236-7187</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar de cursada:</strong> Sede Central - Taller Textil</p>
+                `
+            },
+            electricista: {
+                titulo: "Electricista Industrial",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes, Martes y Jueves</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 18:30 a 22:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar de cursada:</strong> Sede Central - Talleres de Fuerza Motriz</p>
+                `
+            },
+            ingles: {
+                titulo: "Inglés Tecnológico",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Lunes y Miércoles</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 19:00 a 21:30 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar de cursada:</strong> Aula de Medios - Sede Central</p>
+                `
+            },
+            informatica: {
+                titulo: "Informática para Administración y Gestión",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Martes y Jueves</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 08:30 a 11:30 hs (Turno Mañana)</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar de cursada:</strong> Sede Central - Laboratorio de Computación</p>
+                `
+            },
+            marketing: {
+                titulo: "Marketing Digital",
+                info: `
+                    <p><i class="fas fa-calendar-day"></i> <strong>Días de cursada:</strong> Jueves y Viernes</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 14:00 a 17:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar de cursada:</strong> Aula Multimedia / Entorno Virtual</p>
                 `
             }
         };
@@ -285,10 +339,8 @@
             const modal = document.getElementById('courseModal');
             const title = document.getElementById('modalTitle');
             const body = document.getElementById('modalBody');
-        
             title.innerText = infoFolletos[idCurso].titulo;
             body.innerHTML = infoFolletos[idCurso].info;
-        
             modal.style.display = 'flex';
         }
 
@@ -298,15 +350,9 @@
 
         window.onclick = function(event) {
             const modal = document.getElementById('courseModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
+            if (event.target == modal) { modal.style.display = 'none'; }
         }
     </script>
-
-    <footer>
-        <p>&copy; 2026 CFP Avellaneda - Plataforma en Desarrollo</p>
-    </footer>
 
 </body>
 </html>
