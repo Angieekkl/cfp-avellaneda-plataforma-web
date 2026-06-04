@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CFP Avellaneda - Formación Profesional</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -35,11 +36,11 @@
     
         <div class="cards-container" style="margin-top: 3rem;">
             <div class="card" style="border-top: 4px solid #10b981;">
-                <h3>📜 Certificación Nacional</h3>
+                <h3><i class="fas fa-certificate" style="color: #10b981;"></i> Certificación Nacional</h3>
                 <p>Todos nuestros cursos cuentan con títulos oficiales y reconocimiento a nivel nacional, respaldando tu futuro profesional.</p>
             </div>
             <div class="card" style="border-top: 4px solid #10b981;">
-                <h3>🕒 Horarios Flexibles</h3>
+                <h3><i class="fas fa-clock" style="color: #10b981;"></i> Horarios Flexibles</h3>
                 <p>Contamos con franjas horarias extendidas y cursos vespertinos pensados especialmente para quienes trabajan.</p>
             </div>
         </div>
@@ -47,36 +48,182 @@
 
         <!-- SECCIÓN OFERTA ACADÉMICA -->
     <section id="oferta" class="section bg-light">
-        <h2>Oferta Académica</h2>
-        <p>Capacitaciones prácticas con alta demanda en el mercado actual.</p>
+        <h2><i class="fas fa-graduation-cap"></i> Cursos Destacados</h2>
+        <p>Hacé clic en cualquiera de nuestras capacitaciones oficiales para ver los detalles de cursada.</p>
+    
         <div class="cards-container">
-            <div class="card">
-                <h3>💻 Informática</h3>
-                <p>Formación en entornos digitales, sistemas informáticos y herramientas tecnológicas esenciales.</p>
-                <span class="badge">Próximo ciclo</span>
+            <div class="card curso-item" onclick="openCourseModal('diseno')">
+                <div class="curso-img-container">
+                    <img src="css/assets/curso_diseño_grafico.jpeg" alt="Curso Diseño Gráfico" class="curso-foto">
+                </div>
+                <div class="curso-card-body">
+                    <div class="curso-badge">Informática</div>
+                    <h3>Diseño Gráfico en Sistemas Informáticos</h3>
+                    <p>Nivel I y II. Subsede de 16 a 23 años.</p>
+                    <span class="btn-ver">Ver Horarios e Inscripción ↓</span>
+                </div>
             </div>
-            <div class="card">
-                <h3>⚡ Electricidad y Oficios</h3>
-                <p>Capacitación técnica en electricidad domiciliaria y mantenimiento de infraestructura con prácticas reales.</p>
-                <span class="badge">Próximo ciclo</span>
+        
+            <div class="card curso-item" onclick="openCourseModal('programacion')">
+                <div class="curso-img-container">
+                    <img src="css/assets/pensamiento_computacional.jpeg" alt="Curso Programación" class="curso-foto">
+                </div>
+                <div class="curso-card-body">
+                    <div class="curso-badge">Informática</div>
+                    <h3>Pensamiento Computacional / Programación</h3>
+                    <p>Estrategias de código y lógica. Subsede de 16 a 23 años.</p>
+                    <span class="btn-ver">Ver Horarios e Inscripción ↓</span>
+                </div>
             </div>
-            <div class="card">
-                <h3>📊 Administración</h3>
-                <p>Herramientas de gestión comercial, organización administrativa y técnicas contables para empresas.</p>
-                <span class="badge">Próximo ciclo</span>
+        
+            <div class="card curso-item" onclick="openCourseModal('herrero')">
+                <div class="curso-img-container">
+                    <img src="css/assets/curso_herrero.jpeg" alt="Curso Herrería" class="curso-foto">
+                </div>
+                <div class="curso-card-body">
+                    <div class="curso-badge">Oficios</div>
+                    <h3>Herrero/a</h3>
+                    <p>Formación técnica profesional con salida laboral en Wilde.</p>
+                    <span class="btn-ver">Ver Horarios e Inscripción ↓</span>
+                </div>
             </div>
+
+            <div class="card curso-item" onclick="openCourseModal('modista')">
+                <div class="curso-img-container">
+                    <img src="css/assets/curso_modista.jpeg" alt="Curso Alta Costura" class="curso-foto">
+                </div>
+                <div class="curso-card-body">
+                    <div class="curso-badge">Textil</div>
+                    <h3>Modista de Alta Costura</h3>
+                    <p>Diseño, moldería y confección industrial en sede central.</p>
+                    <span class="btn-ver">Ver Horarios e Inscripción ↓</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="requisitos-box">
+            <h3><i class="fas fa-file-signature"></i> Requisitos Generales de Inscripción</h3>
+            <div class="requisitos-grid">
+                <div class="req-item"><i class="fas fa-file-alt"></i> 3 Fotocopias de DNI</div>
+                <div class="req-item"><i class="fas fa-user-graduate"></i> 1 Fotocopia de Título Terminado</div>
+                <div class="req-item"><i class="fas fa-hand-holding-usd"></i> Bono Contribución</div>
+            </div>
+            <p class="horario-atencion"><i class="fas fa-calendar-alt"></i> <strong>Horario de atención en Bedelía:</strong> Lunes a Viernes de 8:00 a 21:00 hs.</p>
         </div>
     </section>
 
-        <!-- SECCIÓN CONTACTO -->
     <section id="contacto" class="section">
-        <h2>Contacto y Ubicación</h2>
-        <p>¡Vení a conocer nuestras instalaciones!</p>
-        <div style="margin-top: 1.5rem; font-size: 1.1rem;">
-            <p>📍 <strong>Dirección:</strong> Alfredo Carlino 6243, Avellaneda, Gran Buenos Aires.</p>
-            <p>🏛️ <strong>Carácter:</strong> Educación Pública y Gratuita (Jóvenes y Adultos).</p>
+        <h2><i class="fas fa-envelope"></i> ¿Tenés dudas? Envianos tu consulta</h2>
+        <p>Completá el formulario para que el equipo administrativo se contacte con vos.</p>
+    
+        <div class="form-container">
+            <form onsubmit="event.preventDefault(); alert('¡Simulación de envío! Esta función se integrará en la fase final con base de datos.');">
+                <div class="form-group">
+                    <label for="nombre">Nombre y Apellido:</label>
+                    <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" placeholder="nombre@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="curso-interes">Curso de interés:</label>
+                    <select id="curso-interes">
+                        <option>Pensamiento Computacional / Programación</option>
+                        <option>Diseño Gráfico en Sistemas</option>
+                        <option>Herrero/a</option>
+                        <option>Modista de Alta Costura</option>
+                        <option>Otros cursos (Consultar cartelera)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Tu consulta:</label>
+                    <textarea id="mensaje" rows="4" placeholder="Escribí tu mensaje acá..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Consulta</button>
+            </form>
+        </div>
+    
+        <div style="margin-top: 3rem; font-size: 1.1rem; border-top: 1px solid #e2e8f0; padding-top: 2rem; text-align: center;">
+            <p style="margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt" style="color: #1e3a8a; width: 25px;"></i> <strong>Sede Central:</strong> Alfredo Carlino 6243 - Wilde, Avellaneda.</p>
+            <p style="margin-bottom: 0.5rem;"><i class="fas fa-phone-alt" style="color: #1e3a8a; width: 25px;"></i> <strong>Teléfono:</strong> 4236-7187 / 7722-5375</p>
+            <p style="margin-bottom: 0.5rem;"><i class="fas fa-envelope" style="color: #1e3a8a; width: 25px;"></i> <strong>Email Oficial:</strong> cfp404avellaneda@abc.gob.ar</p>
         </div>
     </section>
+
+    <div id="courseModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+         <h2 id="modalTitle">Detalles del Curso</h2>
+            <div id="modalBody">
+                </div>
+        </div>
+    </div>
+
+    <script>
+        const infoFolletos = {
+            diseno: {
+                titulo: "Diseño Gráfico en Sistemas Informáticos (Nivel I y II)",
+                info: `
+                    <p><strong>🗓️ Días de cursada:</strong> Lunes, Martes y Miércoles</p>
+                    <p><strong>⏰ Horario:</strong> 13:30 a 17:00 hs</p>
+                    <p><strong>📍 Lugar:</strong> Subsede (Orientado a jóvenes de 16 a 23 años)</p>
+                    <p><strong>📞 Contacto de Subsede:</strong> 7722-5375 / 4204-7128</p>
+                    <div class="modal-alert">Certificación oficial de la Dirección General de Cultura y Educación de la Prov. de Buenos Aires.</div>
+                `
+            },
+            programacion: {
+                titulo: "Pensamiento Computacional / Programación",
+                info: `
+                    <p><strong>🗓️ Días de cursada:</strong> Jueves y Viernes</p>
+                    <p><strong>⏰ Horario:</strong> 13:30 a 16:30 hs</p>
+                    <p><strong>📍 Lugar:</strong> Subsede (Orientado a jóvenes de 16 a 23 años)</p>
+                    <p><strong>📞 Contacto de Subsede:</strong> 7722-5375 / 4204-7128</p>
+                    <div class="modal-alert">Introducción clave al desarrollo de software y lógica algorítmica.</div>
+                `
+            },
+            herrero: {
+                titulo: "Curso Profesional de Herrero/a",
+                info: `
+                    <p><strong>🗓️ Días de cursada:</strong> Martes, Miércoles y Jueves</p>
+                    <p><strong>⏰ Horario:</strong> 18:00 a 22:00 hs (Franja Vespertina ideal trabajadores)</p>
+                    <p><strong>📍 Lugar:</strong> Sede Central - Alfredo Carlino 6243, Wilde</p>
+                    <p><strong>📧 Contacto:</strong> cfp404avellaneda@abc.gob.ar</p>
+                `
+            },
+            modista: {
+                titulo: "Modista de Alta Costura",
+                info: `
+                    <p><strong>🗓️ Días de cursada:</strong> Miércoles, Jueves y Viernes</p>
+                    <p><strong>⏰ Horario:</strong> 13:30 a 17:00 hs</p>
+                    <p><strong>📍 Lugar:</strong> Sede Central - Alfredo Carlino 6243, Wilde</p>
+                    <p><strong>📞 Teléfono Sede:</strong> 4236-7187</p>
+                `
+            }
+        };
+
+        function openCourseModal(idCurso) {
+            const modal = document.getElementById('courseModal');
+            const title = document.getElementById('modalTitle');
+            const body = document.getElementById('modalBody');
+        
+            title.innerText = infoFolletos[idCurso].titulo;
+            body.innerHTML = infoFolletos[idCurso].info;
+        
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('courseModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('courseModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 
     <footer>
         <p>&copy; 2026 CFP Avellaneda - Diseñado por el Equipo de Prácticas Profesionalizantes</p>
