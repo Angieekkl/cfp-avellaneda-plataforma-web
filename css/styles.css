@@ -124,37 +124,31 @@ nav ul li a:hover, nav ul li a.active {
     background-color: rgba(255, 255, 255, 0.07);
     backdrop-filter: blur(5px);
     color: white;
-    max-width: 950px; /* Expandido para que no se vea vacío y tenga más aire */
-    margin: 2rem auto 0 auto;
+    max-width: 950px; 
+    margin: 3rem auto 0 auto;
     padding: 2.5rem;
     border-radius: 12px;
-    border-left: 6px solid #3b82f6; /* Cambiado el verde por el azul de realce */
+    border-left: 6px solid #3b82f6; 
     box-sizing: border-box;
     position: relative;
 }
 
 .info-slider-track {
     position: relative;
-    min-height: 140px; 
+    width: 100%;
 }
 
 .info-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: none; /* Evita que las capas se encimen y rompan el diseño */
     width: 100%;
-    opacity: 0;
-    transform: translateX(15px);
-    transition: all 0.4s ease-in-out;
     text-align: left;
-    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .info-slide.active {
+    display: block; /* Solo se muestra la diapositiva que corresponde */
     opacity: 1;
-    transform: translateX(0);
-    pointer-events: auto;
-    position: relative;
 }
 
 .info-slide h3 {
@@ -172,7 +166,6 @@ nav ul li a:hover, nav ul li a.active {
     line-height: 1.6;
 }
 
-/* Esta clase unifica los iconos vectoriales del slider al azul llamativo */
 .text-success {
     color: #3b82f6 !important; 
 }
@@ -200,7 +193,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .slider-arrow:hover {
-    background: #3b82f6; /* Cambiado el hover al azul unificado */
+    background: #3b82f6; 
     transform: scale(1.05);
 }
 
@@ -362,46 +355,82 @@ nav ul li a:hover, nav ul li a.active {
     background: #2563eb;
 }
 
-/* Caja de Requisitos */
-.requisitos-box {
-    background: white;
-    max-width: 850px;
-    margin: 4rem auto 0 auto;
+/* 1) CAJA DESLIZABLE AGRANDADA Y ACTUALIZADA A AZUL LLAMATIVO */
+.info-slider-container {
+    background-color: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(5px);
+    color: white;
+    max-width: 950px; 
+    margin: 3rem auto 0 auto;
     padding: 2.5rem;
     border-radius: 12px;
-    border: 2px dashed #1e3a8a; /* Pasada a azul institucional para combinar */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    border-left: 6px solid #3b82f6; 
+    box-sizing: border-box;
+    position: relative;
 }
 
-.requisitos-box h3 {
-    color: #1e3a8a;
-    margin-bottom: 1.5rem;
-    font-size: 1.4rem;
+.info-slider-track {
+    position: relative;
+    width: 100%;
 }
 
-.requisitos-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
+.info-slide {
+    display: none; /* Evita que las capas se encimen y rompan el diseño */
+    width: 100%;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.req-item {
-    background: #f1f5f9;
-    padding: 0.85rem 1.5rem;
-    border-radius: 8px;
-    font-weight: 600;
-    color: #1e3a8a; /* Texto interno de requisitos pasado a azul */
-    font-size: 1rem;
+.info-slide.active {
+    display: block; /* Solo se muestra la diapositiva que corresponde */
+    opacity: 1;
+}
+
+.info-slide h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: white;
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0.75rem;
 }
 
-.horario-atencion {
-    font-size: 1rem;
-    color: #475569;
+.info-slide p {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.text-success {
+    color: #3b82f6 !important; 
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.slider-arrow {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.2s;
+}
+
+.slider-arrow:hover {
+    background: #3b82f6; 
+    transform: scale(1.05);
 }
 
 /* 2) ESTILOS DEL FORMULARIO Y SECCIÓN DE CONSULTAS CENTRADAS */
@@ -456,26 +485,31 @@ nav ul li a:hover, nav ul li a.active {
     background: #1d4ed8; /* Variante azul un poco más oscura en el hover */
 }
 
-/* 3) RESTRUCTURACIÓN DEL FOOTER (Info a un costado y azul visible) */
+/* 3) RESTRUCTURACIÓN DEL FOOTER (Efecto Media Pantalla y Leyendas) */
 footer {
     background: #111827;
     color: #9ca3af;
-    text-align: center;
-    padding: 3rem 5%;
+    padding: 5rem 5% 2rem 5%;
     font-size: 1rem;
     border-top: 4px solid #1e3a8a;
+    
+    /* Configuración para ocupar media pantalla vertical y empujar el contenido */
+    min-height: 50vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
 }
 
 .footer-content {
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Tira de forma simétrica la marca a un lado y los datos al otro */
+    justify-content: space-between; 
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 2rem;
     text-align: left;
-    padding-bottom: 2rem;
 }
 
 .footer-brand {
@@ -494,7 +528,6 @@ footer {
     min-width: 300px;
 }
 
-/* Azul celeste institucional suave, estético y legible sobre el fondo gris oscuro */
 .footer-info-grid p {
     margin: 0.75rem 0;
     font-size: 1.05rem;
@@ -510,11 +543,29 @@ footer {
     text-align: center;
 }
 
+/* Barra inferior contenedora de créditos y estado */
 .footer-bottom-bar {
+    width: 100%;
+    max-width: 1200px;
+    margin: 4rem auto 0 auto;
     border-top: 1px solid #2d3748;
-    padding-top: 1.5rem;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between; /* Separa los derechos de la leyenda */
+    align-items: center;
     font-size: 0.9rem;
     color: #6b7280;
+}
+
+.footer-dev-legend {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
 /* VENTANA MODAL (RESGUARDADA) */
