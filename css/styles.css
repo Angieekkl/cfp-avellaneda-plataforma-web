@@ -119,7 +119,7 @@ nav ul li a:hover, nav ul li a.active {
     text-align: center;
 }
 
-/* 1) CAJA DESLIZABLE AGRANDADA Y ACTUALIZADA A AZUL LLAMATIVO */
+/* CAJA DESLIZABLE AGRANDADA Y ACTUALIZADA A AZUL LLAMATIVO */
 .info-slider-container {
     background-color: rgba(255, 255, 255, 0.07);
     backdrop-filter: blur(5px);
@@ -139,7 +139,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .info-slide {
-    display: none; /* Evita que las capas se encimen y rompan el diseño */
+    display: none; 
     width: 100%;
     text-align: left;
     opacity: 0;
@@ -147,7 +147,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .info-slide.active {
-    display: block; /* Solo se muestra la diapositiva que corresponde */
+    display: block; 
     opacity: 1;
 }
 
@@ -355,18 +355,17 @@ nav ul li a:hover, nav ul li a.active {
     background: #2563eb;
 }
 
-/* Caja de Requisitos - Solución al espacio blanco intermedio */
+/* Caja de Requisitos */
 .requisitos-box {
     background: white;
     max-width: 850px;
-    margin: 0 auto; 
+    margin: 4rem auto 0 auto; 
     padding: 3rem 2.5rem;
     border-radius: 12px;
     border: 2px dashed #1e3a8a; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.03);
     text-align: center;
     position: relative;
-    top: -4.5rem; /* Monta el cuadro sobre el fondo oscuro eliminando el hueco blanco */
 }
 
 .requisitos-box h3 {
@@ -406,15 +405,35 @@ nav ul li a:hover, nav ul li a.active {
     margin-top: 1rem;
 }
 
-/* ESTILOS DEL FORMULARIO Y SECCIÓN DE CONSULTAS CENTRADAS */
+/* ESTILOS DEL FORMULARIO Y SECCIÓN DE CONSULTAS CORREGIDOS */
 #contacto {
     text-align: center; 
+    padding-top: 2rem;
+}
+
+/* Título de Consultas (Marcado en Fucsia) - Cambiado a Azul Oscuro Intermedio y ordenado verticalmente */
+#contacto h2 {
+    color: #1d4ed8; 
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    display: block; 
+    width: 100%;
+}
+
+/* Subtítulo de Consultas (Marcado en Fucsia) - Mayor separación con la zona blanca */
+#contacto > p {
+    font-size: 1.1rem;
+    color: #475569;
+    margin-bottom: 3.5rem; /* Aleja el bloque del inicio de la caja blanca */
+    display: block;
+    width: 100%;
+    padding: 0 1rem;
 }
 
 .form-container {
     background: #ffffff;
     max-width: 650px;
-    margin: 2rem auto 0 auto;
+    margin: 0 auto;
     padding: 2.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
@@ -458,7 +477,16 @@ nav ul li a:hover, nav ul li a.active {
     background: #1d4ed8; 
 }
 
-/* 3) RESTRUCTURACIÓN DEL FOOTER (Centrado, Azul claro legible y Media pantalla) */
+/* Párrafo de contacto inferior (Marcado en Rojo) - Más abajo y con el mismo Azul de arriba */
+.form-container + p {
+    margin-top: 3.5rem !important; /* Espaciado extra hacia abajo */
+    color: #1d4ed8 !important; /* Mismo azul intermedio aplicado */
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 0 1.5rem;
+}
+
+/* RESTRUCTURACIÓN DEL FOOTER (Centrado, Azul claro legible y Media pantalla) */
 footer {
     background: #111827;
     color: #9ca3af;
@@ -480,7 +508,7 @@ footer {
     flex-direction: column; 
     align-items: center;    
     text-align: center;
-    gap: 3.5rem; /* Separación marcada entre la marca y el bloque de datos inferior */
+    gap: 3.5rem; 
 }
 
 /* Nombre del CFP alineado al medio en azul claro legible */
@@ -610,7 +638,7 @@ footer {
     gap: 0.6rem;
 }
 
-/* MEDIA QUERIES REDISEÑADOS */
+/* MEDIA QUERIES CON CORRECCIONES PARA MÓVIL */
 @media (max-width: 1024px) {
     .menu-toggle {
         display: block; 
@@ -646,14 +674,59 @@ footer {
         padding-bottom: 0.75rem;
     }
 
-    .hero-content h1 { font-size: 2.1rem; }
-    .section-nosotros-institucional h2 { font-size: 2rem; }
-    .section-desc-grande { font-size: 1.1rem; }
-    
+    /* Solución al Bug de Tipeo del Hero en Celulares */
+    .hero {
+        height: auto; 
+        padding: 5rem 1.5rem; 
+    }
+
+    .hero-content h1 { 
+        font-size: 1.6rem; 
+        line-height: 1.3;  
+        margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem; 
+        line-height: 1.5;
+    }
+
+    /* Solución al Espacio Blanco en Celulares (Imagen/Slider de Borde a Borde) */
+    .section-nosotros-institucional { 
+        padding: 3rem 0rem; 
+    }
+
+    .section-desc-grande { 
+        padding: 0 1.5rem; 
+        font-size: 1.05rem;
+    }
+
     .info-slider-container {
-        padding: 1.5rem;
+        max-width: 100%;
+        width: 100vw; 
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0px; 
+        border-left: none; 
+        padding: 2rem 1.5rem; 
     }
     
+    /* Separación extra para la caja de requisitos en pantallas móviles */
+    .requisitos-box {
+        margin: 3rem 1.5rem 0 1.5rem;
+        padding: 2.5rem 1.5rem;
+    }
+
+    /* Correcciones de alineación responsiva en footer y consultas */
+    #contacto h2 {
+        font-size: 1.8rem;
+    }
+
+    #contacto > p {
+        margin-bottom: 2.5rem;
+    }
+
+    .section-nosotros-institucional h2 { font-size: 2rem; }
     .info-slide h3 { font-size: 1.3rem; }
     .info-slide p { font-size: 1rem; }
 
